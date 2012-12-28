@@ -112,6 +112,8 @@
 		3889BAA8168DD7B100FAAAB8 /* MagicalRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 3889B9B7168DD7B100FAAAB8 /* MagicalRecord.m */; };
 		38B3E403168DF8B4006856F9 /* UIView+Alignment.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B3E402168DF8B4006856F9 /* UIView+Alignment.m */; };
 		38B3E4CF168E0150006856F9 /* PPAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B3E4CE168E0150006856F9 /* PPAPIClient.m */; };
+		38B3E4E0168E0755006856F9 /* PPSettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B3E4DF168E0755006856F9 /* PPSettingsManager.m */; };
+		38B3E4E3168E076A006856F9 /* PPNotificationsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B3E4E2168E0769006856F9 /* PPNotificationsManager.m */; };
 		38E72F7316303FA000E0552C /* PPTapDetectingWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E72F7216303FA000E0552C /* PPTapDetectingWindow.m */; };
 /* End PBXBuildFile section */
 
@@ -324,6 +326,10 @@
 		38B3E4CD168E0150006856F9 /* PPAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPAPIClient.h; sourceTree = "<group>"; };
 		38B3E4CE168E0150006856F9 /* PPAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPAPIClient.m; sourceTree = "<group>"; };
 		38B3E4D1168E029F006856F9 /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
+		38B3E4DE168E0755006856F9 /* PPSettingsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSettingsManager.h; sourceTree = "<group>"; };
+		38B3E4DF168E0755006856F9 /* PPSettingsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSettingsManager.m; sourceTree = "<group>"; };
+		38B3E4E1168E0769006856F9 /* PPNotificationsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPNotificationsManager.h; sourceTree = "<group>"; };
+		38B3E4E2168E0769006856F9 /* PPNotificationsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPNotificationsManager.m; sourceTree = "<group>"; };
 		38E72F7116303FA000E0552C /* PPTapDetectingWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPTapDetectingWindow.h; sourceTree = "<group>"; };
 		38E72F7216303FA000E0552C /* PPTapDetectingWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPTapDetectingWindow.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -449,6 +455,10 @@
 				386FAD6D162F072F00305B33 /* PPIAPHelper.m */,
 				386FAD7E162F07EA00305B33 /* PPCoreDataHelper.h */,
 				386FAD7F162F07EA00305B33 /* PPCoreDataHelper.m */,
+				38B3E4DE168E0755006856F9 /* PPSettingsManager.h */,
+				38B3E4DF168E0755006856F9 /* PPSettingsManager.m */,
+				38B3E4E1168E0769006856F9 /* PPNotificationsManager.h */,
+				38B3E4E2168E0769006856F9 /* PPNotificationsManager.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -1067,6 +1077,8 @@
 				3889BAA8168DD7B100FAAAB8 /* MagicalRecord.m in Sources */,
 				38B3E403168DF8B4006856F9 /* UIView+Alignment.m in Sources */,
 				38B3E4CF168E0150006856F9 /* PPAPIClient.m in Sources */,
+				38B3E4E0168E0755006856F9 /* PPSettingsManager.m in Sources */,
+				38B3E4E3168E076A006856F9 /* PPNotificationsManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
