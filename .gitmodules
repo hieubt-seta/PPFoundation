@@ -1,0 +1,3 @@
+[submodule "3rdParties/MagicalRecord"]
+	path = 3rdParties/MagicalRecord
+	url = https://github.com/magicalpanda/MagicalRecord.git
