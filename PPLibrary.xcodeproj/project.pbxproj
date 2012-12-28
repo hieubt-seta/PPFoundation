@@ -68,7 +68,6 @@
 		387F128916304F0E00A9EA82 /* UIBarButtonItem+CWAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F128816304F0E00A9EA82 /* UIBarButtonItem+CWAdditions.m */; };
 		387F128C16304FE700A9EA82 /* UIImage+CWAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F128B16304FE700A9EA82 /* UIImage+CWAdditions.m */; };
 		387F1290163050AB00A9EA82 /* UIColor+ColorUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F128F163050AB00A9EA82 /* UIColor+ColorUtils.m */; };
-		387F12A11630534300A9EA82 /* UIView+Alignment.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F129F1630534300A9EA82 /* UIView+Alignment.m */; };
 		387F1312163053F600A9EA82 /* NSArray+SSToolkitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F12AF163053F600A9EA82 /* NSArray+SSToolkitAdditions.m */; };
 		387F1313163053F600A9EA82 /* NSBundle+SSToolkitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F12B1163053F600A9EA82 /* NSBundle+SSToolkitAdditions.m */; };
 		387F1314163053F600A9EA82 /* NSData+SSToolkitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F12B3163053F600A9EA82 /* NSData+SSToolkitAdditions.m */; };
@@ -111,6 +110,7 @@
 		3889BAA6168DD7B100FAAAB8 /* MagicalRecord+Setup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3889B9B3168DD7B100FAAAB8 /* MagicalRecord+Setup.m */; };
 		3889BAA7168DD7B100FAAAB8 /* MagicalRecord+ShorthandSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 3889B9B5168DD7B100FAAAB8 /* MagicalRecord+ShorthandSupport.m */; };
 		3889BAA8168DD7B100FAAAB8 /* MagicalRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 3889B9B7168DD7B100FAAAB8 /* MagicalRecord.m */; };
+		38B3E403168DF8B4006856F9 /* UIView+Alignment.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B3E402168DF8B4006856F9 /* UIView+Alignment.m */; };
 		38E72F7316303FA000E0552C /* PPTapDetectingWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E72F7216303FA000E0552C /* PPTapDetectingWindow.m */; };
 /* End PBXBuildFile section */
 
@@ -232,8 +232,6 @@
 		387F128B16304FE700A9EA82 /* UIImage+CWAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CWAdditions.m"; sourceTree = "<group>"; };
 		387F128E163050AB00A9EA82 /* UIColor+ColorUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+ColorUtils.h"; path = "ColorUtils/UIColor+ColorUtils.h"; sourceTree = "<group>"; };
 		387F128F163050AB00A9EA82 /* UIColor+ColorUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+ColorUtils.m"; path = "ColorUtils/UIColor+ColorUtils.m"; sourceTree = "<group>"; };
-		387F129E1630534300A9EA82 /* UIView+Alignment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Alignment.h"; path = "uiview-alignment/UIView+Alignment.h"; sourceTree = "<group>"; };
-		387F129F1630534300A9EA82 /* UIView+Alignment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Alignment.m"; path = "uiview-alignment/UIView+Alignment.m"; sourceTree = "<group>"; };
 		387F12AE163053F600A9EA82 /* NSArray+SSToolkitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+SSToolkitAdditions.h"; sourceTree = "<group>"; };
 		387F12AF163053F600A9EA82 /* NSArray+SSToolkitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+SSToolkitAdditions.m"; sourceTree = "<group>"; };
 		387F12B0163053F600A9EA82 /* NSBundle+SSToolkitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+SSToolkitAdditions.h"; sourceTree = "<group>"; };
@@ -320,6 +318,8 @@
 		3889B9B7168DD7B100FAAAB8 /* MagicalRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicalRecord.m; sourceTree = "<group>"; };
 		3889B9B8168DD7B100FAAAB8 /* MagicalRecordShorthand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicalRecordShorthand.h; sourceTree = "<group>"; };
 		3889B9B9168DD7B100FAAAB8 /* CoreData+MagicalRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CoreData+MagicalRecord.h"; sourceTree = "<group>"; };
+		38B3E401168DF8B4006856F9 /* UIView+Alignment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Alignment.h"; sourceTree = "<group>"; };
+		38B3E402168DF8B4006856F9 /* UIView+Alignment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Alignment.m"; sourceTree = "<group>"; };
 		38E72F7116303FA000E0552C /* PPTapDetectingWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPTapDetectingWindow.h; sourceTree = "<group>"; };
 		38E72F7216303FA000E0552C /* PPTapDetectingWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPTapDetectingWindow.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -593,8 +593,8 @@
 		386FAD5C162F060E00305B33 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				387F129E1630534300A9EA82 /* UIView+Alignment.h */,
-				387F129F1630534300A9EA82 /* UIView+Alignment.m */,
+				38B3E401168DF8B4006856F9 /* UIView+Alignment.h */,
+				38B3E402168DF8B4006856F9 /* UIView+Alignment.m */,
 				386FACA1162EFD9E00305B33 /* UIView+Animatable.h */,
 				386FACA2162EFD9E00305B33 /* UIView+Animatable.m */,
 			);
@@ -949,7 +949,6 @@
 				387F128916304F0E00A9EA82 /* UIBarButtonItem+CWAdditions.m in Sources */,
 				387F128C16304FE700A9EA82 /* UIImage+CWAdditions.m in Sources */,
 				387F1290163050AB00A9EA82 /* UIColor+ColorUtils.m in Sources */,
-				387F12A11630534300A9EA82 /* UIView+Alignment.m in Sources */,
 				387F1312163053F600A9EA82 /* NSArray+SSToolkitAdditions.m in Sources */,
 				387F1313163053F600A9EA82 /* NSBundle+SSToolkitAdditions.m in Sources */,
 				387F1314163053F600A9EA82 /* NSData+SSToolkitAdditions.m in Sources */,
@@ -992,6 +991,7 @@
 				3889BAA6168DD7B100FAAAB8 /* MagicalRecord+Setup.m in Sources */,
 				3889BAA7168DD7B100FAAAB8 /* MagicalRecord+ShorthandSupport.m in Sources */,
 				3889BAA8168DD7B100FAAAB8 /* MagicalRecord.m in Sources */,
+				38B3E403168DF8B4006856F9 /* UIView+Alignment.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
