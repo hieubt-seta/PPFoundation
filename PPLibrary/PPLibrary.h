@@ -9,4 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "PPMacros.h"
 #import "PPUIKit.h"
-#import "SynthesizeSingleton.h"
+
+/*
+ * Externals & Helpers
+ */
+
+#import "PPSettingsManager.h"

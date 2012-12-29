@@ -7,7 +7,6 @@
 //
 
 #import "PPAPIClient.h"
-#import "SynthesizeSingleton.h"
 #import "AFImageRequestOperation.h"
 
 @implementation PPAPIClient
@@ -17,7 +16,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(PPAPIClient)
 - (id)init
 {
     NSURL *baseURL = nil;
-    self = [super initWithBaseURL:baseURL];
+    self = [self initWithBaseURL:baseURL];
     if (self) {
     }
     return self;

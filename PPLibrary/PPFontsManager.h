@@ -10,4 +10,6 @@
 
 @interface PPFontsManager : NSObject
 
++ (void)printAllSystemFonts;
+
 @end

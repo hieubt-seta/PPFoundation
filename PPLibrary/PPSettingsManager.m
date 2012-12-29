@@ -7,7 +7,6 @@
 //
 
 #import "PPSettingsManager.h"
-#import "SynthesizeSingleton.h"
 
 @interface PPSettingsManager ()
 
@@ -28,4 +27,5 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(PPSettingsManager)
     }
     return self;
 }
+
 @end
