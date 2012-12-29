@@ -74,8 +74,8 @@
 			NSInteger randomInt = arc4random()%500;
 			float r = (randomInt/500.0)+0.5;
 			
-			CGAffineTransform leftWobble = CGAffineTransformMakeRotation(degreesToRadians( (kAnimationRotateDeg * -1.0) - r ));
-			CGAffineTransform rightWobble = CGAffineTransformMakeRotation(degreesToRadians( kAnimationRotateDeg + r ));
+			CGAffineTransform leftWobble = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS( (kAnimationRotateDeg * -1.0) - r ));
+			CGAffineTransform rightWobble = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS( kAnimationRotateDeg + r ));
 			
 			self.transform = leftWobble;  // starting point
 			

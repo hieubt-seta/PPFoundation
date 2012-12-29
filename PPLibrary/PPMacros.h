@@ -143,27 +143,33 @@ return self; \
 #define SCREEN_SIZE_LANDSCAPE ( CGSizeMake( SCREEN_WIDTH_LANDSCAPE * SCREEN_SCALE , SCREEN_HEIGHT_LANDSCAPE * SCREEN_SCALE ) )
 
 #pragma mark - COLOR
+
 /** UIColor: Color From Hex **/
-#define colorFromHex( rgbValue ) ( [UIColor UIColorFromRGB:rgbValue ] )
+#define COLOR_FROM_HEX( rgbValue )                  ( [UIColor UIColorFromRGB:rgbValue ] )
 
 /** UIColor: Color from RGB **/
-#define colorFromRGB( r , g , b ) ( [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1 ] )
 
-#define RGB(r, g, b)                    [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
+#define RGB(r, g, b)                                [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
 
 /** UIColor: Color from RGBA **/
 
-#define colorFromRGBA(r , g , b , a ) ( [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a ] )
+#define COLOR_FROM_RGBA(r , g , b , a )             ( [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a ] )
 
-#define RGBA(r, g, b, a)                [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+#define RGBA(r, g, b, a)                            [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 
-#pragma mark - DEGREES, RADIANS
+#pragma mark - DEGREES, RADIANS, MEASUREMENT UNITS CONVERTERS
 
 /** Degrees to Radian **/
-#define degreesToRadians( degrees ) ( ( degrees ) / 180.0 * M_PI )
+#define DEGREES_TO_RADIANS( degrees ) ( ( degrees ) / 180.0 * M_PI )
 
 /** Radians to Degrees **/
-#define radiansToDegrees( radians ) ( ( radians ) * ( 180.0 / M_PI ) )
+#define RADIANS_TO_DEGREES( radians ) ( ( radians ) * ( 180.0 / M_PI ) )
+
+/** Miles to Kilometers **/
+#define MILES_TO_KILOMETERS ( miles ) (miles * 1.60934)
+ 
+/** Miles to Feets **/
+#define MILES_TO_FEETS ( miles ) ( miles * 5280 )
 
 #pragma mark - DLOG
 
