@@ -123,14 +123,14 @@
 		3819FCFD168ED0E500F98D4E /* PPFontsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPFontsManager.m; sourceTree = "<group>"; };
 		3819FD04168F21D300F98D4E /* PPBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPBaseRequest.h; sourceTree = "<group>"; };
 		3819FD05168F21D300F98D4E /* PPBaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPBaseRequest.m; sourceTree = "<group>"; };
-		386FAC46162EFD6800305B33 /* PPLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PPLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		386FAC46162EFD6800305B33 /* winner21.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = winner21.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		386FAC4A162EFD6800305B33 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		386FAC4C162EFD6800305B33 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		386FAC4E162EFD6800305B33 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		386FAC52162EFD6800305B33 /* PPLibrary-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PPLibrary-Info.plist"; sourceTree = "<group>"; };
+		386FAC52162EFD6800305B33 /* winner21-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "winner21-Info.plist"; sourceTree = "<group>"; };
 		386FAC54162EFD6800305B33 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		386FAC56162EFD6800305B33 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		386FAC58162EFD6800305B33 /* PPLibrary-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PPLibrary-Prefix.pch"; sourceTree = "<group>"; };
+		386FAC58162EFD6800305B33 /* winner21-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "winner21-Prefix.pch"; sourceTree = "<group>"; };
 		386FAC59162EFD6800305B33 /* PPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPAppDelegate.h; sourceTree = "<group>"; };
 		386FAC5A162EFD6800305B33 /* PPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPAppDelegate.m; sourceTree = "<group>"; };
 		386FAC5C162EFD6800305B33 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -405,7 +405,7 @@
 		386FAC47162EFD6800305B33 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				386FAC46162EFD6800305B33 /* PPLibrary.app */,
+				386FAC46162EFD6800305B33 /* winner21.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -444,9 +444,9 @@
 		386FAC51162EFD6800305B33 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				386FAC52162EFD6800305B33 /* PPLibrary-Info.plist */,
+				386FAC52162EFD6800305B33 /* winner21-Info.plist */,
 				386FAC56162EFD6800305B33 /* main.m */,
-				386FAC58162EFD6800305B33 /* PPLibrary-Prefix.pch */,
+				386FAC58162EFD6800305B33 /* winner21-Prefix.pch */,
 				386FAC53162EFD6800305B33 /* InfoPlist.strings */,
 				386FAC5C162EFD6800305B33 /* Default.png */,
 				386FAC5E162EFD6800305B33 /* Default@2x.png */,
@@ -940,9 +940,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		386FAC45162EFD6800305B33 /* PPLibrary */ = {
+		386FAC45162EFD6800305B33 /* winner21 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 386FAC7F162EFD6900305B33 /* Build configuration list for PBXNativeTarget "PPLibrary" */;
+			buildConfigurationList = 386FAC7F162EFD6900305B33 /* Build configuration list for PBXNativeTarget "winner21" */;
 			buildPhases = (
 				386FAC42162EFD6800305B33 /* Sources */,
 				386FAC43162EFD6800305B33 /* Frameworks */,
@@ -952,9 +952,9 @@
 			);
 			dependencies = (
 			);
-			name = PPLibrary;
+			name = winner21;
 			productName = PPLibrary;
-			productReference = 386FAC46162EFD6800305B33 /* PPLibrary.app */;
+			productReference = 386FAC46162EFD6800305B33 /* winner21.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -967,7 +967,7 @@
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = PIPU;
 			};
-			buildConfigurationList = 386FAC40162EFD6800305B33 /* Build configuration list for PBXProject "PPLibrary" */;
+			buildConfigurationList = 386FAC40162EFD6800305B33 /* Build configuration list for PBXProject "winner21" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -979,7 +979,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				386FAC45162EFD6800305B33 /* PPLibrary */,
+				386FAC45162EFD6800305B33 /* winner21 */,
 			);
 		};
 /* End PBXProject section */
@@ -1176,11 +1176,11 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "PPLibrary/PPLibrary-Prefix.pch";
-				INFOPLIST_FILE = "PPLibrary/PPLibrary-Info.plist";
+				GCC_PREFIX_HEADER = "PPLibrary/winner21-Prefix.pch";
+				INFOPLIST_FILE = "PPLibrary/winner21-Info.plist";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-all_load";
-				PRODUCT_NAME = PPLibrary;
+				PRODUCT_NAME = winner21;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1190,11 +1190,11 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "PPLibrary/PPLibrary-Prefix.pch";
-				INFOPLIST_FILE = "PPLibrary/PPLibrary-Info.plist";
+				GCC_PREFIX_HEADER = "PPLibrary/winner21-Prefix.pch";
+				INFOPLIST_FILE = "PPLibrary/winner21-Info.plist";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-all_load";
-				PRODUCT_NAME = PPLibrary;
+				PRODUCT_NAME = winner21;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -1202,7 +1202,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		386FAC40162EFD6800305B33 /* Build configuration list for PBXProject "PPLibrary" */ = {
+		386FAC40162EFD6800305B33 /* Build configuration list for PBXProject "winner21" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				386FAC7D162EFD6900305B33 /* Debug */,
@@ -1211,7 +1211,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		386FAC7F162EFD6900305B33 /* Build configuration list for PBXNativeTarget "PPLibrary" */ = {
+		386FAC7F162EFD6900305B33 /* Build configuration list for PBXNativeTarget "winner21" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				386FAC80162EFD6900305B33 /* Debug */,
