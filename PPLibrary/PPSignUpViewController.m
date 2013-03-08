@@ -36,4 +36,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)btnSignUpClicked:(id)sender {
+    [self.progressHUD showAnimated:YES whileExecutingBlock:^{
+        sleep(2);
+    } completionBlock:^{
+        self.PP_SESSION.isAuthenticated = YES;
+        [self.appDelegate showRaceMeetingView];
+    }];
+}
+
 @end

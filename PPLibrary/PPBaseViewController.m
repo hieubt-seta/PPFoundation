@@ -17,6 +17,7 @@
 - (void)dealloc
 {
     [self unregisterNotifications];
+    [_progressHUD release];
     [super dealloc];
 }
 
@@ -107,5 +108,62 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
+- (MBProgressHUD *)progressHUD
+{
+    if (!_progressHUD) {
+        _progressHUD = [[MBProgressHUD alloc] initWithWindow:self.appDelegate.window];
+        _progressHUD.animationType = MBProgressHUDAnimationFade;
+        _progressHUD.dimBackground = YES;
+		[self.appDelegate.window addSubview:_progressHUD];
+    }
+    return _progressHUD;
+}
+
+- (void)showLoadingView
+{
+    [self showLoadingViewWithTitle:@""];
+}
+
+- (void)showLoadingViewWithTitle:(NSString *)title
+{
+    _progressHUD.labelText = title;
+    [_progressHUD show:YES];
+}
+
+- (void)hideLoadingView
+{
+    _progressHUD.labelText = @"";
+    [_progressHUD hide:YES];
+}
+
+- (void)showMessage:(NSString *)message withTitle:(NSString *)title {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    [alert show];
+    [alert release];
+}
+
+- (void)showMessage:(NSString *)message withTitle:(NSString *)title andDelegate:(id)delegate
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:delegate cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
+    [alert show];
+    [alert release];
+}
+
+- (void)showMessage:(NSString *)message withTitle:(NSString *)title delegate:(id)delegate andTag:(NSInteger)tag
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:delegate cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
+    alert.tag = tag;
+    [alert show];
+    [alert release];
+}
+
+- (void)showMessage:(NSString *)message withTitle:(NSString *)title cancelButtonTitle:(NSString *)cancelTitle otherButtonTitles:(NSString *)otherTitle delegate:(id)delegate andTag:(NSInteger)tag
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:delegate cancelButtonTitle:cancelTitle otherButtonTitles:otherTitle, nil];
+    alert.tag = tag;
+    alert.delegate = delegate;
+    [alert show];
+    [alert release];
+}
 
 @end

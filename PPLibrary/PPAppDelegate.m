@@ -17,22 +17,6 @@
 
 @implementation PPAppDelegate
 
-- (PPSplashViewController *)splashViewController
-{
-    if (!_splashViewController) {
-        _splashViewController = [[PPSplashViewController alloc] initWithNibName:@"PPSplashViewController" bundle:nil];
-    }
-    return _splashViewController;
-}
-
-- (PPSideMenuViewController *)sideMenuViewController
-{
-    if (!_sideMenuViewController) {
-        _sideMenuViewController = [[PPSideMenuViewController alloc] initWithNibName:@"PPSideMenuViewController" bundle:nil];
-    }
-    return _sideMenuViewController;
-}
-
 - (PPRaceMeetingsController *)mainViewController
 {
     if (!_mainViewController) {
@@ -41,42 +25,25 @@
     return _mainViewController;
 }
 
-- (UINavigationController *)navigationController1
-{
-    if (!_navigationController1) {
-        _navigationController1 = [[UINavigationController alloc] initWithRootViewController:self.splashViewController];
-    }
-    return _navigationController1;
-}
-
-
-- (UINavigationController *)navigationController2
-{
-    if (!_navigationController2) {
-        _navigationController2 = [[UINavigationController alloc] initWithRootViewController:self.mainViewController];
-    }
-    return _navigationController2;
-}
-
 // Show Splash View
 - (void)showSplashView
 {
-    self.window.rootViewController = self.navigationController1;
+    PPSplashViewController *vc = [[[PPSplashViewController alloc] initWithNibName:@"PPSplashViewController" bundle:nil] autorelease];
+    UINavigationController *nav = [[[UINavigationController alloc] initWithRootViewController:vc] autorelease];
+    self.window.rootViewController = nav;
 }
 
 // Show Main View
-- (void)showMainView
+- (void)showRaceMeetingView
 {
-    self.sideMenu = [MFSideMenu menuWithNavigationController:self.navigationController2
-                      leftSideMenuController:self.sideMenuViewController
-                     rightSideMenuController:nil];
-    self.window.rootViewController = self.navigationController2;
+    self.window.rootViewController = self.sideMenu.navigationController;
 }
 
 - (void)dealloc
 {
+    [_mainViewController release];
+    [_sideMenu release];
     [_window release];
-    [_sideMenuViewController release];
     [super dealloc];
 }
 
@@ -85,6 +52,9 @@
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     
     // Override point for customization after application launch.
+    self.sideMenu = [MFSideMenu menuWithNavigationController:[[[UINavigationController alloc] initWithRootViewController:self.mainViewController] autorelease]
+                                      leftSideMenuController:[[[PPSideMenuViewController alloc] initWithNibName:@"PPSideMenuViewController" bundle:nil] autorelease]
+                                     rightSideMenuController:nil];
     
     [self showSplashView];
     [self.window makeKeyAndVisible];

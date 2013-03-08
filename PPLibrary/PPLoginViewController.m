@@ -38,8 +38,37 @@
 
 - (IBAction)btnLoginClicked:(id)sender
 {
-    self.PP_SESSION.isAuthenticated = YES;    
-    [self.appDelegate showMainView];
+    [self.progressHUD showAnimated:YES whileExecutingBlock:^{
+        sleep(2);
+    } completionBlock:^{
+        self.PP_SESSION.isAuthenticated = YES;
+        [self.appDelegate showRaceMeetingView];
+    }];
+}
+
+- (void)dealloc {
+    [_txtEmail release];
+    [_txtPassword release];
+    [super dealloc];
+}
+
+- (void)viewDidUnload {
+    [self setTxtEmail:nil];
+    [self setTxtPassword:nil];
+    [super viewDidUnload];
+}
+
+#pragma mark - UITextFieldDelegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    
 }
 
 @end

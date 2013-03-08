@@ -10,4 +10,5 @@
 
 @interface PPSignUpViewController : PPBaseViewController
 
+- (IBAction)btnSignUpClicked:(id)sender;
 @end
