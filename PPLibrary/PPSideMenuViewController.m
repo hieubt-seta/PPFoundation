@@ -8,6 +8,7 @@
 
 #import "PPSideMenuViewController.h"
 #import "PPSettingsViewController.h"
+#import "PPPurchasedIssuesViewController.h"
 
 @interface PPSideMenuViewController ()
 
@@ -150,6 +151,9 @@
 
 - (void)gotoPurchasedIssuesView
 {
+    PPPurchasedIssuesViewController *vc = [[[PPPurchasedIssuesViewController alloc] initWithNibName:@"PPPurchasedIssuesViewController" bundle:nil] autorelease];
+    self.appDelegate.sideMenu.navigationController.viewControllers = @[vc];
+    [self.appDelegate.sideMenu setMenuState:MFSideMenuStateClosed];    
 }
 
 - (void)gotoSettingsView

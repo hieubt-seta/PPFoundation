@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @class PPSplashViewController;
-@class PPMainViewController;
+@class PPRaceMeetingsController;
 @class PPSideMenuViewController;
 @class MFSideMenu;
 
@@ -18,7 +18,7 @@
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) PPSplashViewController *splashViewController;
 @property (strong, nonatomic) PPSideMenuViewController *sideMenuViewController;
-@property (strong, nonatomic) PPMainViewController *mainViewController;
+@property (strong, nonatomic) PPRaceMeetingsController *mainViewController;
 @property (strong, nonatomic) UINavigationController *navigationController;
 @property (strong, nonatomic) MFSideMenu *sideMenu;
 

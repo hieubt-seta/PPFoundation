@@ -118,13 +118,18 @@
 		38C13B7A16E8F843005AD801 /* PPBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C13B7916E8F843005AD801 /* PPBaseViewController.m */; };
 		38C13B7E16E8F8A9005AD801 /* PPSideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C13B7C16E8F8A9005AD801 /* PPSideMenuViewController.m */; };
 		38C13B7F16E8F8A9005AD801 /* PPSideMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38C13B7D16E8F8A9005AD801 /* PPSideMenuViewController.xib */; };
-		38C13B8316E8FBB9005AD801 /* PPMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C13B8116E8FBB8005AD801 /* PPMainViewController.m */; };
-		38C13B8416E8FBB9005AD801 /* PPMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38C13B8216E8FBB8005AD801 /* PPMainViewController.xib */; };
+		38C13B8316E8FBB9005AD801 /* PPRaceMeetingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C13B8116E8FBB8005AD801 /* PPRaceMeetingsController.m */; };
+		38C13B8416E8FBB9005AD801 /* PPRaceMeetingsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38C13B8216E8FBB8005AD801 /* PPRaceMeetingsController.xib */; };
 		38C13B8A16E9A52F005AD801 /* PPValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C13B8916E9A52F005AD801 /* PPValidator.m */; };
 		38C13B8D16E9BF4D005AD801 /* PPGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C13B8C16E9BF4C005AD801 /* PPGlobal.m */; };
 		38C13B9416E9C321005AD801 /* PPSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C13B9316E9C321005AD801 /* PPSession.m */; };
 		38C13B9A16E9D1EB005AD801 /* PPSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C13B9816E9D1EB005AD801 /* PPSettingsViewController.m */; };
 		38C13B9B16E9D1EB005AD801 /* PPSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38C13B9916E9D1EB005AD801 /* PPSettingsViewController.xib */; };
+		38C13BA516E9DC6D005AD801 /* GCDispatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C13BA116E9DC6D005AD801 /* GCDispatch.m */; };
+		38C13BA616E9DC6D005AD801 /* GCDispatchQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C13BA316E9DC6D005AD801 /* GCDispatchQueue.m */; };
+		38C13BA716E9DC6D005AD801 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 38C13BA416E9DC6D005AD801 /* README.md */; };
+		38C13BAD16E9DEB1005AD801 /* PPPurchasedIssuesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C13BAB16E9DEB1005AD801 /* PPPurchasedIssuesViewController.m */; };
+		38C13BAE16E9DEB1005AD801 /* PPPurchasedIssuesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38C13BAC16E9DEB1005AD801 /* PPPurchasedIssuesViewController.xib */; };
 		38E72F7316303FA000E0552C /* PPTapDetectingWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E72F7216303FA000E0552C /* PPTapDetectingWindow.m */; };
 /* End PBXBuildFile section */
 
@@ -347,9 +352,9 @@
 		38C13B7B16E8F8A9005AD801 /* PPSideMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSideMenuViewController.h; sourceTree = "<group>"; };
 		38C13B7C16E8F8A9005AD801 /* PPSideMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSideMenuViewController.m; sourceTree = "<group>"; };
 		38C13B7D16E8F8A9005AD801 /* PPSideMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PPSideMenuViewController.xib; sourceTree = "<group>"; };
-		38C13B8016E8FBB8005AD801 /* PPMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPMainViewController.h; sourceTree = "<group>"; };
-		38C13B8116E8FBB8005AD801 /* PPMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPMainViewController.m; sourceTree = "<group>"; };
-		38C13B8216E8FBB8005AD801 /* PPMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PPMainViewController.xib; sourceTree = "<group>"; };
+		38C13B8016E8FBB8005AD801 /* PPRaceMeetingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPRaceMeetingsController.h; sourceTree = "<group>"; };
+		38C13B8116E8FBB8005AD801 /* PPRaceMeetingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPRaceMeetingsController.m; sourceTree = "<group>"; };
+		38C13B8216E8FBB8005AD801 /* PPRaceMeetingsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PPRaceMeetingsController.xib; sourceTree = "<group>"; };
 		38C13B8816E9A52F005AD801 /* PPValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPValidator.h; sourceTree = "<group>"; };
 		38C13B8916E9A52F005AD801 /* PPValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPValidator.m; sourceTree = "<group>"; };
 		38C13B8B16E9BF4C005AD801 /* PPGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPGlobal.h; sourceTree = "<group>"; };
@@ -359,6 +364,14 @@
 		38C13B9716E9D1EB005AD801 /* PPSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSettingsViewController.h; sourceTree = "<group>"; };
 		38C13B9816E9D1EB005AD801 /* PPSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSettingsViewController.m; sourceTree = "<group>"; };
 		38C13B9916E9D1EB005AD801 /* PPSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PPSettingsViewController.xib; sourceTree = "<group>"; };
+		38C13BA016E9DC6D005AD801 /* GCDispatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDispatch.h; sourceTree = "<group>"; };
+		38C13BA116E9DC6D005AD801 /* GCDispatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDispatch.m; sourceTree = "<group>"; };
+		38C13BA216E9DC6D005AD801 /* GCDispatchQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDispatchQueue.h; sourceTree = "<group>"; };
+		38C13BA316E9DC6D005AD801 /* GCDispatchQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDispatchQueue.m; sourceTree = "<group>"; };
+		38C13BA416E9DC6D005AD801 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		38C13BAA16E9DEB1005AD801 /* PPPurchasedIssuesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPPurchasedIssuesViewController.h; sourceTree = "<group>"; };
+		38C13BAB16E9DEB1005AD801 /* PPPurchasedIssuesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPPurchasedIssuesViewController.m; sourceTree = "<group>"; };
+		38C13BAC16E9DEB1005AD801 /* PPPurchasedIssuesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PPPurchasedIssuesViewController.xib; sourceTree = "<group>"; };
 		38E72F7116303FA000E0552C /* PPTapDetectingWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPTapDetectingWindow.h; sourceTree = "<group>"; };
 		38E72F7216303FA000E0552C /* PPTapDetectingWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPTapDetectingWindow.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -462,6 +475,7 @@
 				38B3E4B5168DFAE1006856F9 /* Models */,
 				38B3E4B6168DFAE6006856F9 /* Views */,
 				38B3E4B4168DFAD6006856F9 /* Controllers */,
+				38C13B9616E9D17D005AD801 /* Settings */,
 				386FACB5162EFDAB00305B33 /* Helpers&Utils */,
 			);
 			name = Classes;
@@ -557,6 +571,7 @@
 		386FACDA162F01DC00305B33 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				38C13B9F16E9DC6D005AD801 /* GCDispatch */,
 				386FACE5162F021200305B33 /* AFNetworking */,
 				38C13B2216E8F73C005AD801 /* MagicalRecord */,
 				38C13A6E16E8E3CC005AD801 /* MFSideMenu */,
@@ -792,10 +807,8 @@
 			children = (
 				38C13B8716E99D07005AD801 /* Base */,
 				38C13B8516E99CE2005AD801 /* Splash */,
-				38C13B9616E9D17D005AD801 /* Settings */,
-				38C13B8016E8FBB8005AD801 /* PPMainViewController.h */,
-				38C13B8116E8FBB8005AD801 /* PPMainViewController.m */,
-				38C13B8216E8FBB8005AD801 /* PPMainViewController.xib */,
+				38C13BA816E9DE79005AD801 /* RaceMeetings */,
+				38C13BA916E9DE80005AD801 /* PurchasedIssues */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -1029,6 +1042,39 @@
 			name = Settings;
 			sourceTree = "<group>";
 		};
+		38C13B9F16E9DC6D005AD801 /* GCDispatch */ = {
+			isa = PBXGroup;
+			children = (
+				38C13BA016E9DC6D005AD801 /* GCDispatch.h */,
+				38C13BA116E9DC6D005AD801 /* GCDispatch.m */,
+				38C13BA216E9DC6D005AD801 /* GCDispatchQueue.h */,
+				38C13BA316E9DC6D005AD801 /* GCDispatchQueue.m */,
+				38C13BA416E9DC6D005AD801 /* README.md */,
+			);
+			name = GCDispatch;
+			path = 3rdParties/GCDispatch;
+			sourceTree = SOURCE_ROOT;
+		};
+		38C13BA816E9DE79005AD801 /* RaceMeetings */ = {
+			isa = PBXGroup;
+			children = (
+				38C13B8016E8FBB8005AD801 /* PPRaceMeetingsController.h */,
+				38C13B8116E8FBB8005AD801 /* PPRaceMeetingsController.m */,
+				38C13B8216E8FBB8005AD801 /* PPRaceMeetingsController.xib */,
+			);
+			name = RaceMeetings;
+			sourceTree = "<group>";
+		};
+		38C13BA916E9DE80005AD801 /* PurchasedIssues */ = {
+			isa = PBXGroup;
+			children = (
+				38C13BAA16E9DEB1005AD801 /* PPPurchasedIssuesViewController.h */,
+				38C13BAB16E9DEB1005AD801 /* PPPurchasedIssuesViewController.m */,
+				38C13BAC16E9DEB1005AD801 /* PPPurchasedIssuesViewController.xib */,
+			);
+			name = PurchasedIssues;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1087,8 +1133,10 @@
 				386FAC61162EFD6800305B33 /* Default-568h@2x.png in Resources */,
 				386FAC67162EFD6800305B33 /* PPSplashViewController.xib in Resources */,
 				38C13B7F16E8F8A9005AD801 /* PPSideMenuViewController.xib in Resources */,
-				38C13B8416E8FBB9005AD801 /* PPMainViewController.xib in Resources */,
+				38C13B8416E8FBB9005AD801 /* PPRaceMeetingsController.xib in Resources */,
 				38C13B9B16E9D1EB005AD801 /* PPSettingsViewController.xib in Resources */,
+				38C13BA716E9DC6D005AD801 /* README.md in Resources */,
+				38C13BAE16E9DEB1005AD801 /* PPPurchasedIssuesViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1196,11 +1244,14 @@
 				38C13B7716E8F73D005AD801 /* MagicalRecord.m in Sources */,
 				38C13B7A16E8F843005AD801 /* PPBaseViewController.m in Sources */,
 				38C13B7E16E8F8A9005AD801 /* PPSideMenuViewController.m in Sources */,
-				38C13B8316E8FBB9005AD801 /* PPMainViewController.m in Sources */,
+				38C13B8316E8FBB9005AD801 /* PPRaceMeetingsController.m in Sources */,
 				38C13B8A16E9A52F005AD801 /* PPValidator.m in Sources */,
 				38C13B8D16E9BF4D005AD801 /* PPGlobal.m in Sources */,
 				38C13B9416E9C321005AD801 /* PPSession.m in Sources */,
 				38C13B9A16E9D1EB005AD801 /* PPSettingsViewController.m in Sources */,
+				38C13BA516E9DC6D005AD801 /* GCDispatch.m in Sources */,
+				38C13BA616E9DC6D005AD801 /* GCDispatchQueue.m in Sources */,
+				38C13BAD16E9DEB1005AD801 /* PPPurchasedIssuesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

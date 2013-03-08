@@ -9,7 +9,7 @@
 #import "PPAppDelegate.h"
 #import "PPSplashViewController.h"
 #import "PPSideMenuViewController.h"
-#import "PPMainViewController.h"
+#import "PPRaceMeetingsController.h"
 
 @interface PPAppDelegate (Privates)
 
@@ -33,10 +33,10 @@
     return _sideMenuViewController;
 }
 
-- (PPMainViewController *)mainViewController
+- (PPRaceMeetingsController *)mainViewController
 {
     if (!_mainViewController) {
-        _mainViewController = [[PPMainViewController alloc] initWithNibName:@"PPMainViewController" bundle:nil];
+        _mainViewController = [[PPRaceMeetingsController alloc] initWithNibName:@"PPRaceMeetingsController" bundle:nil];
     }
     return _mainViewController;
 }
