@@ -125,9 +125,6 @@
 		38C13B9416E9C321005AD801 /* PPSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C13B9316E9C321005AD801 /* PPSession.m */; };
 		38C13B9A16E9D1EB005AD801 /* PPSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C13B9816E9D1EB005AD801 /* PPSettingsViewController.m */; };
 		38C13B9B16E9D1EB005AD801 /* PPSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38C13B9916E9D1EB005AD801 /* PPSettingsViewController.xib */; };
-		38C13BA516E9DC6D005AD801 /* GCDispatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C13BA116E9DC6D005AD801 /* GCDispatch.m */; };
-		38C13BA616E9DC6D005AD801 /* GCDispatchQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C13BA316E9DC6D005AD801 /* GCDispatchQueue.m */; };
-		38C13BA716E9DC6D005AD801 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 38C13BA416E9DC6D005AD801 /* README.md */; };
 		38C13BAD16E9DEB1005AD801 /* PPPurchasedIssuesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C13BAB16E9DEB1005AD801 /* PPPurchasedIssuesViewController.m */; };
 		38C13BAE16E9DEB1005AD801 /* PPPurchasedIssuesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38C13BAC16E9DEB1005AD801 /* PPPurchasedIssuesViewController.xib */; };
 		38E72F7316303FA000E0552C /* PPTapDetectingWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E72F7216303FA000E0552C /* PPTapDetectingWindow.m */; };
@@ -364,11 +361,6 @@
 		38C13B9716E9D1EB005AD801 /* PPSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSettingsViewController.h; sourceTree = "<group>"; };
 		38C13B9816E9D1EB005AD801 /* PPSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSettingsViewController.m; sourceTree = "<group>"; };
 		38C13B9916E9D1EB005AD801 /* PPSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PPSettingsViewController.xib; sourceTree = "<group>"; };
-		38C13BA016E9DC6D005AD801 /* GCDispatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDispatch.h; sourceTree = "<group>"; };
-		38C13BA116E9DC6D005AD801 /* GCDispatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDispatch.m; sourceTree = "<group>"; };
-		38C13BA216E9DC6D005AD801 /* GCDispatchQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDispatchQueue.h; sourceTree = "<group>"; };
-		38C13BA316E9DC6D005AD801 /* GCDispatchQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDispatchQueue.m; sourceTree = "<group>"; };
-		38C13BA416E9DC6D005AD801 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		38C13BAA16E9DEB1005AD801 /* PPPurchasedIssuesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPPurchasedIssuesViewController.h; sourceTree = "<group>"; };
 		38C13BAB16E9DEB1005AD801 /* PPPurchasedIssuesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPPurchasedIssuesViewController.m; sourceTree = "<group>"; };
 		38C13BAC16E9DEB1005AD801 /* PPPurchasedIssuesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PPPurchasedIssuesViewController.xib; sourceTree = "<group>"; };
@@ -571,7 +563,6 @@
 		386FACDA162F01DC00305B33 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
-				38C13B9F16E9DC6D005AD801 /* GCDispatch */,
 				386FACE5162F021200305B33 /* AFNetworking */,
 				38C13B2216E8F73C005AD801 /* MagicalRecord */,
 				38C13A6E16E8E3CC005AD801 /* MFSideMenu */,
@@ -1042,19 +1033,6 @@
 			name = Settings;
 			sourceTree = "<group>";
 		};
-		38C13B9F16E9DC6D005AD801 /* GCDispatch */ = {
-			isa = PBXGroup;
-			children = (
-				38C13BA016E9DC6D005AD801 /* GCDispatch.h */,
-				38C13BA116E9DC6D005AD801 /* GCDispatch.m */,
-				38C13BA216E9DC6D005AD801 /* GCDispatchQueue.h */,
-				38C13BA316E9DC6D005AD801 /* GCDispatchQueue.m */,
-				38C13BA416E9DC6D005AD801 /* README.md */,
-			);
-			name = GCDispatch;
-			path = 3rdParties/GCDispatch;
-			sourceTree = SOURCE_ROOT;
-		};
 		38C13BA816E9DE79005AD801 /* RaceMeetings */ = {
 			isa = PBXGroup;
 			children = (
@@ -1135,7 +1113,6 @@
 				38C13B7F16E8F8A9005AD801 /* PPSideMenuViewController.xib in Resources */,
 				38C13B8416E8FBB9005AD801 /* PPRaceMeetingsController.xib in Resources */,
 				38C13B9B16E9D1EB005AD801 /* PPSettingsViewController.xib in Resources */,
-				38C13BA716E9DC6D005AD801 /* README.md in Resources */,
 				38C13BAE16E9DEB1005AD801 /* PPPurchasedIssuesViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1249,8 +1226,6 @@
 				38C13B8D16E9BF4D005AD801 /* PPGlobal.m in Sources */,
 				38C13B9416E9C321005AD801 /* PPSession.m in Sources */,
 				38C13B9A16E9D1EB005AD801 /* PPSettingsViewController.m in Sources */,
-				38C13BA516E9DC6D005AD801 /* GCDispatch.m in Sources */,
-				38C13BA616E9DC6D005AD801 /* GCDispatchQueue.m in Sources */,
 				38C13BAD16E9DEB1005AD801 /* PPPurchasedIssuesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
