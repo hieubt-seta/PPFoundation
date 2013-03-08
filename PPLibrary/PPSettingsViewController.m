@@ -29,7 +29,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.settingItems = @[LSSTRING(@"About Terms & Privacy"), LSSTRING(@"Tutoria"), LSSTRING(@"FAQ"), LSSTRING(@"Send feedback")];
+    self.settingItems = @[LSSTRING(@"About Terms & Privacy"), LSSTRING(@"Tutorial"), LSSTRING(@"FAQ"), LSSTRING(@"Send feedback")];
     self.title = LSSTRING(@"Settings");
 }
 
@@ -68,8 +68,19 @@
     if (!cell) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
-    cell.textLabel.text = [self.settingItems objectAtIndex:indexPath.row];
+    [self configureCell:cell atIndexPath:indexPath];
     return cell;
+}
+
+- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
+{
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.textLabel.text = [self.settingItems objectAtIndex:indexPath.row];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end

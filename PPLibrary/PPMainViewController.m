@@ -27,7 +27,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.title = @"Race Meetings";
+    self.title = LSSTRING(@"Race Meetings");
 }
 
 - (void)didReceiveMemoryWarning

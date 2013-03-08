@@ -557,9 +557,9 @@
 		386FACDA162F01DC00305B33 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				386FACE5162F021200305B33 /* AFNetworking */,
 				38C13B2216E8F73C005AD801 /* MagicalRecord */,
 				38C13A6E16E8E3CC005AD801 /* MFSideMenu */,
-				386FACE5162F021200305B33 /* AFNetworking */,
 				386FAD14162F028700305B33 /* MBProgressHUD */,
 				386FACE0162F020000305B33 /* AsyncImageView */,
 			);
@@ -818,8 +818,8 @@
 		38B3E4B7168DFB13006856F9 /* Externals */ = {
 			isa = PBXGroup;
 			children = (
-				386FAC87162EFD7F00305B33 /* Categories */,
 				386FAD8C162F0CFA00305B33 /* PPControls */,
+				386FAC87162EFD7F00305B33 /* Categories */,
 				386FACDA162F01DC00305B33 /* Vendors */,
 			);
 			name = Externals;
