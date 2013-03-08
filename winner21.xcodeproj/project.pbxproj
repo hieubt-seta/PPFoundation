@@ -123,6 +123,8 @@
 		38C13B8A16E9A52F005AD801 /* PPValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C13B8916E9A52F005AD801 /* PPValidator.m */; };
 		38C13B8D16E9BF4D005AD801 /* PPGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C13B8C16E9BF4C005AD801 /* PPGlobal.m */; };
 		38C13B9416E9C321005AD801 /* PPSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C13B9316E9C321005AD801 /* PPSession.m */; };
+		38C13B9A16E9D1EB005AD801 /* PPSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C13B9816E9D1EB005AD801 /* PPSettingsViewController.m */; };
+		38C13B9B16E9D1EB005AD801 /* PPSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38C13B9916E9D1EB005AD801 /* PPSettingsViewController.xib */; };
 		38E72F7316303FA000E0552C /* PPTapDetectingWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E72F7216303FA000E0552C /* PPTapDetectingWindow.m */; };
 /* End PBXBuildFile section */
 
@@ -354,6 +356,9 @@
 		38C13B8C16E9BF4C005AD801 /* PPGlobal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPGlobal.m; sourceTree = "<group>"; };
 		38C13B9216E9C321005AD801 /* PPSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSession.h; sourceTree = "<group>"; };
 		38C13B9316E9C321005AD801 /* PPSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSession.m; sourceTree = "<group>"; };
+		38C13B9716E9D1EB005AD801 /* PPSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSettingsViewController.h; sourceTree = "<group>"; };
+		38C13B9816E9D1EB005AD801 /* PPSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSettingsViewController.m; sourceTree = "<group>"; };
+		38C13B9916E9D1EB005AD801 /* PPSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PPSettingsViewController.xib; sourceTree = "<group>"; };
 		38E72F7116303FA000E0552C /* PPTapDetectingWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPTapDetectingWindow.h; sourceTree = "<group>"; };
 		38E72F7216303FA000E0552C /* PPTapDetectingWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPTapDetectingWindow.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -787,6 +792,7 @@
 			children = (
 				38C13B8716E99D07005AD801 /* Base */,
 				38C13B8516E99CE2005AD801 /* Splash */,
+				38C13B9616E9D17D005AD801 /* Settings */,
 				38C13B8016E8FBB8005AD801 /* PPMainViewController.h */,
 				38C13B8116E8FBB8005AD801 /* PPMainViewController.m */,
 				38C13B8216E8FBB8005AD801 /* PPMainViewController.xib */,
@@ -1013,6 +1019,16 @@
 			name = CustomCells;
 			sourceTree = "<group>";
 		};
+		38C13B9616E9D17D005AD801 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				38C13B9716E9D1EB005AD801 /* PPSettingsViewController.h */,
+				38C13B9816E9D1EB005AD801 /* PPSettingsViewController.m */,
+				38C13B9916E9D1EB005AD801 /* PPSettingsViewController.xib */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1072,6 +1088,7 @@
 				386FAC67162EFD6800305B33 /* PPSplashViewController.xib in Resources */,
 				38C13B7F16E8F8A9005AD801 /* PPSideMenuViewController.xib in Resources */,
 				38C13B8416E8FBB9005AD801 /* PPMainViewController.xib in Resources */,
+				38C13B9B16E9D1EB005AD801 /* PPSettingsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1183,6 +1200,7 @@
 				38C13B8A16E9A52F005AD801 /* PPValidator.m in Sources */,
 				38C13B8D16E9BF4D005AD801 /* PPGlobal.m in Sources */,
 				38C13B9416E9C321005AD801 /* PPSession.m in Sources */,
+				38C13B9A16E9D1EB005AD801 /* PPSettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

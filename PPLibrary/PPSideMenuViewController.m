@@ -7,6 +7,7 @@
 //
 
 #import "PPSideMenuViewController.h"
+#import "PPSettingsViewController.h"
 
 @interface PPSideMenuViewController ()
 
@@ -68,9 +69,9 @@
 - (void)setupMenuItems
 {
     if (self.PP_SESSION.isAuthenticated) {
-        self.menuItems = @[@"Race Mettings", @"Purchased Items", @"Settings", @"Language"];
+        self.menuItems = @[LSSTRING(@"Race Mettings"), LSSTRING(@"Purchased Items"), LSSTRING(@"Settings"), LSSTRING(@"Language")];
     } else {
-        self.menuItems = @[@"Race Mettings", @"Settings", @"Language"];
+        self.menuItems = @[LSSTRING(@"Race Mettings"), LSSTRING(@"Settings"), LSSTRING(@"Language")];
     }
     [self.tableView reloadData];
 }
@@ -103,6 +104,59 @@
         cell.accessoryView.hidden = NO;
     }
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    if (self.PP_SESSION.isAuthenticated) {
+        switch (indexPath.row) {
+            case 0: // Race meetings
+                [self gotoRaceMeetingsView];
+                break;
+            case 1: // Purchased issues
+                [self gotoPurchasedIssuesView];
+                break;
+            case 2: // Settings
+                [self gotoSettingsView];
+                break;
+            case 3: // Language
+                break;
+            default:
+                break;
+        }
+    } else {
+        switch (indexPath.row) {
+            case 0: // Race meetings
+                [self gotoRaceMeetingsView];
+                break;
+            case 1: // Settings
+                [self gotoSettingsView];
+                break;
+            case 2: // Language
+                break;
+            default:
+                break;
+        }
+    }
+}
+
+- (void)gotoRaceMeetingsView
+{
+    self.appDelegate.sideMenu.navigationController.viewControllers = @[self.appDelegate.mainViewController];
+    [self.appDelegate.sideMenu setMenuState:MFSideMenuStateClosed];
+}
+
+- (void)gotoPurchasedIssuesView
+{
+}
+
+- (void)gotoSettingsView
+{
+    PPSettingsViewController *vc = [[[PPSettingsViewController alloc] initWithNibName:@"PPSettingsViewController" bundle:nil] autorelease];
+    self.appDelegate.sideMenu.navigationController.viewControllers = @[vc];
+    [self.appDelegate.sideMenu setMenuState:MFSideMenuStateClosed];    
 }
 
 @end

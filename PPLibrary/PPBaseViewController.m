@@ -58,7 +58,32 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+    DLog(@"Received Memory Warning - %@", [self class]);
+    
     // Dispose of any resources that can be recreated.
+    // only want to do this on iOS 6
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 6.0) {
+        //  Don't want to rehydrate the view if it's already unloaded
+        BOOL isLoaded = [self isViewLoaded];
+        
+        //  We check the window property to make sure that the view is not visible
+        if (isLoaded && self.view.window == nil) {
+            
+            //  Give a chance to implementors to get model data from their views
+            [self performSelectorOnMainThread:@selector(viewWillUnload)
+                                   withObject:nil
+                                waitUntilDone:YES];
+            
+            //  Detach it from its parent (in cases of view controller containment)
+            [self.view removeFromSuperview];
+            self.view = nil;    //  Clear out the view.  Goodbye!
+            
+            //  The view is now unloaded...now call viewDidUnload
+            [self performSelectorOnMainThread:@selector(viewDidUnload)
+                                   withObject:nil
+                                waitUntilDone:YES];
+        }
+    }
 }
 
 - (PPAppDelegate *)appDelegate

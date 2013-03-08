@@ -58,7 +58,7 @@
 // Show Main View
 - (void)showMainView
 {
-    [MFSideMenu menuWithNavigationController:self.navigationController
+    self.sideMenu = [MFSideMenu menuWithNavigationController:self.navigationController
                       leftSideMenuController:self.sideMenuViewController
                      rightSideMenuController:nil];
     self.window.rootViewController = self.navigationController;
