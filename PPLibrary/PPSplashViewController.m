@@ -36,6 +36,10 @@
     [self gotoSignUpView];
 }
 
+- (IBAction)btnDoItLaterClicked:(id)sender {
+    [self.appDelegate showRaceMeetingView];
+}
+
 - (void)gotoLoginView
 {
     PPLoginViewController *vc = [[[PPLoginViewController alloc] initWithNibName:@"PPLoginViewController" bundle:nil] autorelease];

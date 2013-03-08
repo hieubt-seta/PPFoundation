@@ -13,5 +13,6 @@
 
 - (IBAction)btnLoginClicked:(id)sender;
 - (IBAction)btnSignUpClicked:(id)sender;
+- (IBAction)btnDoItLaterClicked:(id)sender;
 
 @end

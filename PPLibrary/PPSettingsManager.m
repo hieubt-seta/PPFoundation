@@ -23,4 +23,18 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(PPSettingsManager)
     return self;
 }
 
+- (BOOL)isFirstTimeOpenApp
+{
+    if (![_userDefaults objectForKey:kDidOpenAppForTheFirstTime]) {
+        return YES;
+    }
+    return NO;
+}
+
+- (void)setDidOpenAppForTheFirstTime
+{
+    [_userDefaults setBool:YES forKey:kDidOpenAppForTheFirstTime];
+    [_userDefaults synchronize];
+}
+
 @end

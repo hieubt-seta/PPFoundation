@@ -14,4 +14,7 @@
 
 + (PPSettingsManager *)sharedPPSettingsManager;
 
+- (BOOL)isFirstTimeOpenApp;
+- (void)setDidOpenAppForTheFirstTime;
+
 @end

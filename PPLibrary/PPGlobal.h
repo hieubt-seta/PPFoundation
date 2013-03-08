@@ -8,7 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSString * const kDidOpenAppForTheFirstTime;
+
+// Define Notification Keys
 extern NSString * const kAuthenticationStatusDidChangeNotification;
+extern NSString * const kAppOpenFromStateDidChangeNotification;
+
+
 
 @interface PPGlobal : NSObject
 

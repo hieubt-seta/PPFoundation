@@ -8,7 +8,11 @@
 
 #import "PPGlobal.h"
 
+NSString * const kDidOpenAppForTheFirstTime = @"kAuthenticationStatusDidChangeNotification";
+
+// Define Notification Keys
 NSString * const kAuthenticationStatusDidChangeNotification = @"kAuthenticationStatusDidChangeNotification";
+NSString * const kAppOpenFromStateDidChangeNotification = @"kAppOpenFromStateDidChangeNotification";
 
 @implementation PPGlobal
 

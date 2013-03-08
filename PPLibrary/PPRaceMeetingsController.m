@@ -10,6 +10,8 @@
 
 @interface PPRaceMeetingsController ()
 
+- (void)setupBarButtonItems;
+
 @end
 
 @implementation PPRaceMeetingsController
@@ -19,6 +21,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        [self registerNotifications];
     }
     return self;
 }
@@ -27,13 +30,35 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.title = LSSTRING(@"Race Meetings");    
+    self.title = LSSTRING(@"Race Meetings");
+    [self setupBarButtonItems];
+}
+
+- (void)registerNotifications
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(authenticationStatusDidChangeNotification:) name:kAuthenticationStatusDidChangeNotification object:nil];
+}
+
+- (void)authenticationStatusDidChangeNotification:(NSNotification *)notification
+{
+    [self setupBarButtonItems];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)setupBarButtonItems
+{
+    if (self.PP_SESSION.isAuthenticated) {
+        self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithTitle:@"User Logged In" style:UIBarButtonItemStyleBordered target:nil action:nil] autorelease];
+        self.navigationItem.rightBarButtonItem.enabled = NO;
+    } else {
+        self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithTitle:@"Login" style:UIBarButtonItemStyleBordered target:self action:@selector(menuItemLoginClicked:)] autorelease];
+        self.navigationItem.rightBarButtonItem.enabled = YES;
+    }
 }
 
 #pragma mark UITableViewDelegate/Datasource
@@ -72,4 +97,10 @@
     [self setTableView:nil];
     [super viewDidUnload];
 }
+
+- (void)menuItemLoginClicked:(id)sender
+{
+    [self.appDelegate showSplashView];
+}
+
 @end

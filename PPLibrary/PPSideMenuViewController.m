@@ -20,7 +20,6 @@
 
 - (void)dealloc
 {
-    [self unregisterNotifications];
     [_tableView release];
     [_menuItems release];
     [super dealloc];
