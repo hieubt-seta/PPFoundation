@@ -171,6 +171,18 @@ return self; \
 /** Miles to Feets **/
 #define MILES_TO_FEETS ( miles ) ( miles * 5280 )
 
+#define LSSTRING(str) NSLocalizedString(str, str)
+
+#define NIL_IF_NULL(foo) ((foo == [NSNull null]) ? nil : foo)
+
+#define NULL_IF_NIL(foo) ((foo == nil) ? [NSNull null] : foo)
+
+#define EMPTY_IF_NIL(foo) ((foo == nil) ? @"" : foo)
+
+#define EMPTY_IF_NULL(foo) ((foo == [NSNull null]) ? @"" : foo)
+
+#define EMPTY_IF_NULL_OR_NIL(foo) ((foo == [NSNull null] || foo == nil) ? @"" : foo)
+
 #pragma mark - DLOG
 
 #ifdef DEBUG

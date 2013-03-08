@@ -7,19 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PPSideMenuViewController.h"
 
 @class PPSplashViewController;
 @class PPMainViewController;
+@class PPSideMenuViewController;
 
 @interface PPAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property (strong, nonatomic) PPSplashViewController *splashViewController;
 @property (strong, nonatomic) PPSideMenuViewController *sideMenuViewController;
-
 @property (strong, nonatomic) PPMainViewController *mainViewController;
-
 @property (strong, nonatomic) UINavigationController *navigationController;
+
+- (void)showSplashView;
+- (void)showMainView;
 
 @end

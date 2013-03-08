@@ -14,4 +14,5 @@
     #import <SystemConfiguration/SystemConfiguration.h>
     #import "CoreData+MagicalRecord.h"
     #import "PPLibrary.h"
+    #import "PPGlobal.h"
 #endif

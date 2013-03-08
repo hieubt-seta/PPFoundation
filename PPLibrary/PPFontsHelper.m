@@ -1,14 +1,14 @@
 //
-//  PPFontsManager.m
+//  PPFontsHelper.m
 //  PPLibrary
 //
 //  Created by Hieu Bui on 12/29/12.
 //  Copyright (c) 2012 PIPU. All rights reserved.
 //
 
-#import "PPFontsManager.h"
+#import "PPFontsHelper.h"
 
-@implementation PPFontsManager
+@implementation PPFontsHelper
 
 + (void)printAllSystemFonts
 {

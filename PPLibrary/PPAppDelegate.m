@@ -11,7 +11,58 @@
 #import "PPSideMenuViewController.h"
 #import "PPMainViewController.h"
 
+@interface PPAppDelegate (Privates)
+
+@end
+
 @implementation PPAppDelegate
+
+- (PPSplashViewController *)splashViewController
+{
+    if (!_splashViewController) {
+        _splashViewController = [[PPSplashViewController alloc] initWithNibName:@"PPSplashViewController" bundle:nil];
+    }
+    return _splashViewController;
+}
+
+- (PPSideMenuViewController *)sideMenuViewController
+{
+    if (!_sideMenuViewController) {
+        _sideMenuViewController = [[PPSideMenuViewController alloc] initWithNibName:@"PPSideMenuViewController" bundle:nil];
+    }
+    return _sideMenuViewController;
+}
+
+- (PPMainViewController *)mainViewController
+{
+    if (!_mainViewController) {
+        _mainViewController = [[PPMainViewController alloc] initWithNibName:@"PPMainViewController" bundle:nil];
+    }
+    return _mainViewController;
+}
+
+- (UINavigationController *)navigationController
+{
+    if (!_navigationController) {
+        _navigationController = [[UINavigationController alloc] initWithRootViewController:self.mainViewController];
+    }
+    return _navigationController;
+}
+
+// Show Splash View
+- (void)showSplashView
+{
+    self.window.rootViewController = self.splashViewController;
+}
+
+// Show Main View
+- (void)showMainView
+{
+    [MFSideMenu menuWithNavigationController:self.navigationController
+                      leftSideMenuController:self.sideMenuViewController
+                     rightSideMenuController:nil];
+    self.window.rootViewController = self.navigationController;
+}
 
 - (void)dealloc
 {
@@ -25,17 +76,8 @@
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     
     // Override point for customization after application launch.
-    self.sideMenuViewController = [[[PPSideMenuViewController alloc] initWithNibName:@"PPSideMenuViewController" bundle:nil] autorelease];
     
-    self.mainViewController = [[[PPMainViewController alloc] initWithNibName:@"PPMainViewController" bundle:nil] autorelease];
-    
-    self.navigationController = [[[UINavigationController alloc] initWithRootViewController:self.mainViewController] autorelease];
-    
-    [MFSideMenu menuWithNavigationController:self.navigationController
-                      leftSideMenuController:self.sideMenuViewController
-                     rightSideMenuController:nil];
-    
-    self.window.rootViewController = self.navigationController;
+    [self showSplashView];
     [self.window makeKeyAndVisible];
     
     return YES;

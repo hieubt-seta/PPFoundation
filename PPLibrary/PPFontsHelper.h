@@ -1,5 +1,5 @@
 //
-//  PPFontsManager.h
+//  PPFontsHelper.h
 //  PPLibrary
 //
 //  Created by Hieu Bui on 12/29/12.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface PPFontsManager : NSObject
+@interface PPFontsHelper : NSObject
 
 + (void)printAllSystemFonts;
 

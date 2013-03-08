@@ -26,4 +26,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)btnLoginClicked:(id)sender {
+    [self.appDelegate showMainView];
+    [self.PP_SESSION setIsAuthenticated:YES];
+}
+
 @end

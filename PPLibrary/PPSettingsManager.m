@@ -8,14 +8,9 @@
 
 #import "PPSettingsManager.h"
 
-@interface PPSettingsManager ()
-
-@property (nonatomic, retain) NSUserDefaults *userDefaults;
-
-@end
-
-
 @implementation PPSettingsManager
+
+@synthesize userDefaults = _userDefaults;
 
 SYNTHESIZE_SINGLETON_FOR_CLASS(PPSettingsManager)
 

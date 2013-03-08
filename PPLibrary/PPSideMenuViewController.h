@@ -8,6 +8,8 @@
 
 #import "PPBaseViewController.h"
 
-@interface PPSideMenuViewController : PPBaseViewController
+@interface PPSideMenuViewController : PPBaseViewController<UITableViewDelegate, UITableViewDataSource>
+
+@property (retain, nonatomic) IBOutlet UITableView *tableView;
 
 @end

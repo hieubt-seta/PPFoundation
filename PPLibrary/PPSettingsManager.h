@@ -10,6 +10,8 @@
 
 @interface PPSettingsManager : NSObject
 
+@property (nonatomic, retain) NSUserDefaults *userDefaults;
+
 + (PPSettingsManager *)sharedPPSettingsManager;
 
 @end
