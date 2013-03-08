@@ -130,6 +130,10 @@
 		38C13BB516E9E16E005AD801 /* GCDispatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C13BB116E9E16E005AD801 /* GCDispatch.m */; };
 		38C13BB616E9E16E005AD801 /* GCDispatchQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C13BB316E9E16E005AD801 /* GCDispatchQueue.m */; };
 		38C13BB716E9E16E005AD801 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 38C13BB416E9E16E005AD801 /* README.md */; };
+		38C13BBD16E9F5DA005AD801 /* PPLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C13BBB16E9F5DA005AD801 /* PPLoginViewController.m */; };
+		38C13BBE16E9F5DA005AD801 /* PPLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38C13BBC16E9F5DA005AD801 /* PPLoginViewController.xib */; };
+		38C13BC216E9F86A005AD801 /* PPSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C13BC016E9F86A005AD801 /* PPSignUpViewController.m */; };
+		38C13BC316E9F86A005AD801 /* PPSignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38C13BC116E9F86A005AD801 /* PPSignUpViewController.xib */; };
 		38E72F7316303FA000E0552C /* PPTapDetectingWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E72F7216303FA000E0552C /* PPTapDetectingWindow.m */; };
 /* End PBXBuildFile section */
 
@@ -372,6 +376,12 @@
 		38C13BB216E9E16E005AD801 /* GCDispatchQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDispatchQueue.h; sourceTree = "<group>"; };
 		38C13BB316E9E16E005AD801 /* GCDispatchQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDispatchQueue.m; sourceTree = "<group>"; };
 		38C13BB416E9E16E005AD801 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		38C13BBA16E9F5DA005AD801 /* PPLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPLoginViewController.h; sourceTree = "<group>"; };
+		38C13BBB16E9F5DA005AD801 /* PPLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPLoginViewController.m; sourceTree = "<group>"; };
+		38C13BBC16E9F5DA005AD801 /* PPLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PPLoginViewController.xib; sourceTree = "<group>"; };
+		38C13BBF16E9F86A005AD801 /* PPSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSignUpViewController.h; sourceTree = "<group>"; };
+		38C13BC016E9F86A005AD801 /* PPSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSignUpViewController.m; sourceTree = "<group>"; };
+		38C13BC116E9F86A005AD801 /* PPSignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PPSignUpViewController.xib; sourceTree = "<group>"; };
 		38E72F7116303FA000E0552C /* PPTapDetectingWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPTapDetectingWindow.h; sourceTree = "<group>"; };
 		38E72F7216303FA000E0552C /* PPTapDetectingWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPTapDetectingWindow.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -475,7 +485,6 @@
 				38B3E4B5168DFAE1006856F9 /* Models */,
 				38B3E4B6168DFAE6006856F9 /* Views */,
 				38B3E4B4168DFAD6006856F9 /* Controllers */,
-				38C13B9616E9D17D005AD801 /* Settings */,
 				386FACB5162EFDAB00305B33 /* Helpers&Utils */,
 			);
 			name = Classes;
@@ -806,9 +815,13 @@
 			isa = PBXGroup;
 			children = (
 				38C13B8716E99D07005AD801 /* Base */,
+				38C13BC416E9FAA3005AD801 /* SideMenu */,
 				38C13B8516E99CE2005AD801 /* Splash */,
+				38C13BB816E9F5C1005AD801 /* Login */,
+				38C13BB916E9F5CD005AD801 /* SignUp */,
 				38C13BA816E9DE79005AD801 /* RaceMeetings */,
 				38C13BA916E9DE80005AD801 /* PurchasedIssues */,
+				38C13B9616E9D17D005AD801 /* Settings */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -986,9 +999,6 @@
 			children = (
 				38C13B7816E8F843005AD801 /* PPBaseViewController.h */,
 				38C13B7916E8F843005AD801 /* PPBaseViewController.m */,
-				38C13B7B16E8F8A9005AD801 /* PPSideMenuViewController.h */,
-				38C13B7C16E8F8A9005AD801 /* PPSideMenuViewController.m */,
-				38C13B7D16E8F8A9005AD801 /* PPSideMenuViewController.xib */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -1075,6 +1085,36 @@
 			path = 3rdParties/GCDispatch;
 			sourceTree = SOURCE_ROOT;
 		};
+		38C13BB816E9F5C1005AD801 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				38C13BBA16E9F5DA005AD801 /* PPLoginViewController.h */,
+				38C13BBB16E9F5DA005AD801 /* PPLoginViewController.m */,
+				38C13BBC16E9F5DA005AD801 /* PPLoginViewController.xib */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		38C13BB916E9F5CD005AD801 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				38C13BBF16E9F86A005AD801 /* PPSignUpViewController.h */,
+				38C13BC016E9F86A005AD801 /* PPSignUpViewController.m */,
+				38C13BC116E9F86A005AD801 /* PPSignUpViewController.xib */,
+			);
+			name = SignUp;
+			sourceTree = "<group>";
+		};
+		38C13BC416E9FAA3005AD801 /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				38C13B7B16E8F8A9005AD801 /* PPSideMenuViewController.h */,
+				38C13B7C16E8F8A9005AD801 /* PPSideMenuViewController.m */,
+				38C13B7D16E8F8A9005AD801 /* PPSideMenuViewController.xib */,
+			);
+			name = SideMenu;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1137,6 +1177,8 @@
 				38C13B9B16E9D1EB005AD801 /* PPSettingsViewController.xib in Resources */,
 				38C13BAE16E9DEB1005AD801 /* PPPurchasedIssuesViewController.xib in Resources */,
 				38C13BB716E9E16E005AD801 /* README.md in Resources */,
+				38C13BBE16E9F5DA005AD801 /* PPLoginViewController.xib in Resources */,
+				38C13BC316E9F86A005AD801 /* PPSignUpViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1252,6 +1294,8 @@
 				38C13BAD16E9DEB1005AD801 /* PPPurchasedIssuesViewController.m in Sources */,
 				38C13BB516E9E16E005AD801 /* GCDispatch.m in Sources */,
 				38C13BB616E9E16E005AD801 /* GCDispatchQueue.m in Sources */,
+				38C13BBD16E9F5DA005AD801 /* PPLoginViewController.m in Sources */,
+				38C13BC216E9F86A005AD801 /* PPSignUpViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

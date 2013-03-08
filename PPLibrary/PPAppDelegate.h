@@ -19,7 +19,8 @@
 @property (strong, nonatomic) PPSplashViewController *splashViewController;
 @property (strong, nonatomic) PPSideMenuViewController *sideMenuViewController;
 @property (strong, nonatomic) PPRaceMeetingsController *mainViewController;
-@property (strong, nonatomic) UINavigationController *navigationController;
+@property (strong, nonatomic) UINavigationController *navigationController2;
+@property (strong, nonatomic) UINavigationController *navigationController1;
 @property (strong, nonatomic) MFSideMenu *sideMenu;
 
 - (void)showSplashView;

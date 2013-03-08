@@ -28,6 +28,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.title = LSSTRING(@"Race Meetings");
+    self.PP_SESSION.isAuthenticated = NO;
+    
 }
 
 - (void)didReceiveMemoryWarning

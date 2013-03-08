@@ -41,27 +41,36 @@
     return _mainViewController;
 }
 
-- (UINavigationController *)navigationController
+- (UINavigationController *)navigationController1
 {
-    if (!_navigationController) {
-        _navigationController = [[UINavigationController alloc] initWithRootViewController:self.mainViewController];
+    if (!_navigationController1) {
+        _navigationController1 = [[UINavigationController alloc] initWithRootViewController:self.splashViewController];
     }
-    return _navigationController;
+    return _navigationController1;
+}
+
+
+- (UINavigationController *)navigationController2
+{
+    if (!_navigationController2) {
+        _navigationController2 = [[UINavigationController alloc] initWithRootViewController:self.mainViewController];
+    }
+    return _navigationController2;
 }
 
 // Show Splash View
 - (void)showSplashView
 {
-    self.window.rootViewController = self.splashViewController;
+    self.window.rootViewController = self.navigationController1;
 }
 
 // Show Main View
 - (void)showMainView
 {
-    self.sideMenu = [MFSideMenu menuWithNavigationController:self.navigationController
+    self.sideMenu = [MFSideMenu menuWithNavigationController:self.navigationController2
                       leftSideMenuController:self.sideMenuViewController
                      rightSideMenuController:nil];
-    self.window.rootViewController = self.navigationController;
+    self.window.rootViewController = self.navigationController2;
 }
 
 - (void)dealloc

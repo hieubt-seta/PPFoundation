@@ -14,6 +14,12 @@
 
 @implementation PPBaseViewController
 
+- (void)dealloc
+{
+    [self unregisterNotifications];
+    [super dealloc];
+}
+
 - (id)init
 {
     self = [super init];

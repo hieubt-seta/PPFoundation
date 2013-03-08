@@ -7,6 +7,8 @@
 //
 
 #import "PPSplashViewController.h"
+#import "PPLoginViewController.h"
+#import "PPSignUpViewController.h"
 
 @interface PPSplashViewController ()
 
@@ -27,8 +29,23 @@
 }
 
 - (IBAction)btnLoginClicked:(id)sender {
-    [self.appDelegate showMainView];
-    [self.PP_SESSION setIsAuthenticated:YES];
+    [self gotoLoginView];
+}
+
+- (IBAction)btnSignUpClicked:(id)sender {
+    [self gotoSignUpView];
+}
+
+- (void)gotoLoginView
+{
+    PPLoginViewController *vc = [[[PPLoginViewController alloc] initWithNibName:@"PPLoginViewController" bundle:nil] autorelease];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)gotoSignUpView
+{
+    PPSignUpViewController *vc = [[[PPSignUpViewController alloc] initWithNibName:@"PPSignUpViewController" bundle:nil] autorelease];
+    [self.navigationController pushViewController:vc animated:YES];    
 }
 
 @end

@@ -29,7 +29,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.settingItems = @[LSSTRING(@"About Terms & Privacy"), LSSTRING(@"Tutorial"), LSSTRING(@"FAQ"), LSSTRING(@"Send feedback")];
+    self.settingItems = @[LSSTRING(@"About Terms & Privacy"), LSSTRING(@"Tutorial"), LSSTRING(@"FAQ"), LSSTRING(@"Send Feedback")];
     self.title = LSSTRING(@"Settings");
 }
 

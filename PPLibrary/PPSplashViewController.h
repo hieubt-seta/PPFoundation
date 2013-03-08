@@ -12,4 +12,6 @@
 @interface PPSplashViewController : PPBaseViewController
 
 - (IBAction)btnLoginClicked:(id)sender;
+- (IBAction)btnSignUpClicked:(id)sender;
+
 @end

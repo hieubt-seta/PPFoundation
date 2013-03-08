@@ -31,6 +31,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        [self registerNotifications];
     }
     return self;
 }
@@ -39,15 +40,13 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [self registerNotifications];
     [self setupMenuItems];
 }
 
 - (void)viewDidUnload
 {
     [self setTableView:nil];
-    [self setMenuItems:nil];
-    [self unregisterNotifications];    
+    [self setMenuItems:nil]; 
     [super viewDidUnload];
 }
 
