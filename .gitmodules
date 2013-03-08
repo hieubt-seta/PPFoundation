@@ -1,3 +1,6 @@
 [submodule "3rdParties/MagicalRecord"]
 	path = 3rdParties/MagicalRecord
 	url = https://github.com/magicalpanda/MagicalRecord.git
+[submodule "3rdParties/GCDispatch"]
+	path = 3rdParties/GCDispatch
+	url = https://github.com/pcperini/GCDispatch.git
