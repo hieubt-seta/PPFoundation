@@ -7,6 +7,7 @@
 //
 
 #import "PPPurchasedIssuesViewController.h"
+#import "PPRaceCardViewController.h"
 
 @interface PPPurchasedIssuesViewController ()
 
@@ -61,6 +62,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    PPRaceCardViewController *vc = [[[PPRaceCardViewController alloc] initWithNibName:@"PPRaceCardViewController" bundle:nil] autorelease];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)dealloc {

@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3804EEEB16EA49C100820B78 /* PPRaceCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3804EEE916EA49C100820B78 /* PPRaceCardViewController.m */; };
+		3804EEEC16EA49C100820B78 /* PPRaceCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3804EEEA16EA49C100820B78 /* PPRaceCardViewController.xib */; };
+		3804EEF116EA4AE400820B78 /* PPVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3804EEEF16EA4AE400820B78 /* PPVideoViewController.m */; };
+		3804EEF216EA4AE400820B78 /* PPVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3804EEF016EA4AE400820B78 /* PPVideoViewController.xib */; };
+		3804EEF716EA4D1600820B78 /* PPHorseDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3804EEF516EA4D1600820B78 /* PPHorseDetailsViewController.m */; };
+		3804EEF816EA4D1600820B78 /* PPHorseDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3804EEF616EA4D1600820B78 /* PPHorseDetailsViewController.xib */; };
+		3804EEFE16EA4F1600820B78 /* PPJockeyDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3804EEFC16EA4F1600820B78 /* PPJockeyDetailsViewController.m */; };
+		3804EEFF16EA4F1600820B78 /* PPJockeyDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3804EEFD16EA4F1600820B78 /* PPJockeyDetailsViewController.xib */; };
+		3804EF0316EA4F2000820B78 /* PPTrainerDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3804EF0116EA4F2000820B78 /* PPTrainerDetailsViewController.m */; };
+		3804EF0416EA4F2000820B78 /* PPTrainerDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3804EF0216EA4F2000820B78 /* PPTrainerDetailsViewController.xib */; };
 		3819FCFE168ED0E500F98D4E /* PPFontsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3819FCFD168ED0E500F98D4E /* PPFontsHelper.m */; };
 		3819FD06168F21D300F98D4E /* PPBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3819FD05168F21D300F98D4E /* PPBaseRequest.m */; };
 		386FAC4B162EFD6800305B33 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386FAC4A162EFD6800305B33 /* UIKit.framework */; };
@@ -138,6 +148,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3804EEE816EA49C100820B78 /* PPRaceCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPRaceCardViewController.h; sourceTree = "<group>"; };
+		3804EEE916EA49C100820B78 /* PPRaceCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPRaceCardViewController.m; sourceTree = "<group>"; };
+		3804EEEA16EA49C100820B78 /* PPRaceCardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PPRaceCardViewController.xib; sourceTree = "<group>"; };
+		3804EEEE16EA4AE400820B78 /* PPVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPVideoViewController.h; sourceTree = "<group>"; };
+		3804EEEF16EA4AE400820B78 /* PPVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPVideoViewController.m; sourceTree = "<group>"; };
+		3804EEF016EA4AE400820B78 /* PPVideoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PPVideoViewController.xib; sourceTree = "<group>"; };
+		3804EEF416EA4D1600820B78 /* PPHorseDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPHorseDetailsViewController.h; sourceTree = "<group>"; };
+		3804EEF516EA4D1600820B78 /* PPHorseDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPHorseDetailsViewController.m; sourceTree = "<group>"; };
+		3804EEF616EA4D1600820B78 /* PPHorseDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PPHorseDetailsViewController.xib; sourceTree = "<group>"; };
+		3804EEFB16EA4F1600820B78 /* PPJockeyDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPJockeyDetailsViewController.h; sourceTree = "<group>"; };
+		3804EEFC16EA4F1600820B78 /* PPJockeyDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPJockeyDetailsViewController.m; sourceTree = "<group>"; };
+		3804EEFD16EA4F1600820B78 /* PPJockeyDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PPJockeyDetailsViewController.xib; sourceTree = "<group>"; };
+		3804EF0016EA4F2000820B78 /* PPTrainerDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPTrainerDetailsViewController.h; sourceTree = "<group>"; };
+		3804EF0116EA4F2000820B78 /* PPTrainerDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPTrainerDetailsViewController.m; sourceTree = "<group>"; };
+		3804EF0216EA4F2000820B78 /* PPTrainerDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PPTrainerDetailsViewController.xib; sourceTree = "<group>"; };
 		3819FCFC168ED0E400F98D4E /* PPFontsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPFontsHelper.h; sourceTree = "<group>"; };
 		3819FCFD168ED0E500F98D4E /* PPFontsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPFontsHelper.m; sourceTree = "<group>"; };
 		3819FD04168F21D300F98D4E /* PPBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPBaseRequest.h; sourceTree = "<group>"; };
@@ -406,6 +431,70 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3804EEE616EA499700820B78 /* MainViews */ = {
+			isa = PBXGroup;
+			children = (
+				38C13BA816E9DE79005AD801 /* RaceMeetings */,
+				38C13BA916E9DE80005AD801 /* PurchasedIssues */,
+				3804EEE716EA49B400820B78 /* RaceCard */,
+				3804EEED16EA4AC900820B78 /* Video */,
+				3804EEF316EA4D0100820B78 /* HorseDetails */,
+				3804EEF916EA4EF300820B78 /* JockeyDetails */,
+				3804EEFA16EA4EFC00820B78 /* TrainerDetails */,
+			);
+			name = MainViews;
+			sourceTree = "<group>";
+		};
+		3804EEE716EA49B400820B78 /* RaceCard */ = {
+			isa = PBXGroup;
+			children = (
+				3804EEE816EA49C100820B78 /* PPRaceCardViewController.h */,
+				3804EEE916EA49C100820B78 /* PPRaceCardViewController.m */,
+				3804EEEA16EA49C100820B78 /* PPRaceCardViewController.xib */,
+			);
+			name = RaceCard;
+			sourceTree = "<group>";
+		};
+		3804EEED16EA4AC900820B78 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				3804EEEE16EA4AE400820B78 /* PPVideoViewController.h */,
+				3804EEEF16EA4AE400820B78 /* PPVideoViewController.m */,
+				3804EEF016EA4AE400820B78 /* PPVideoViewController.xib */,
+			);
+			name = Video;
+			sourceTree = "<group>";
+		};
+		3804EEF316EA4D0100820B78 /* HorseDetails */ = {
+			isa = PBXGroup;
+			children = (
+				3804EEF416EA4D1600820B78 /* PPHorseDetailsViewController.h */,
+				3804EEF516EA4D1600820B78 /* PPHorseDetailsViewController.m */,
+				3804EEF616EA4D1600820B78 /* PPHorseDetailsViewController.xib */,
+			);
+			name = HorseDetails;
+			sourceTree = "<group>";
+		};
+		3804EEF916EA4EF300820B78 /* JockeyDetails */ = {
+			isa = PBXGroup;
+			children = (
+				3804EEFB16EA4F1600820B78 /* PPJockeyDetailsViewController.h */,
+				3804EEFC16EA4F1600820B78 /* PPJockeyDetailsViewController.m */,
+				3804EEFD16EA4F1600820B78 /* PPJockeyDetailsViewController.xib */,
+			);
+			name = JockeyDetails;
+			sourceTree = "<group>";
+		};
+		3804EEFA16EA4EFC00820B78 /* TrainerDetails */ = {
+			isa = PBXGroup;
+			children = (
+				3804EF0016EA4F2000820B78 /* PPTrainerDetailsViewController.h */,
+				3804EF0116EA4F2000820B78 /* PPTrainerDetailsViewController.m */,
+				3804EF0216EA4F2000820B78 /* PPTrainerDetailsViewController.xib */,
+			);
+			name = TrainerDetails;
+			sourceTree = "<group>";
+		};
 		3819FCFF168ED13700F98D4E /* CoreDataHelper */ = {
 			isa = PBXGroup;
 			children = (
@@ -819,9 +908,8 @@
 				38C13B8516E99CE2005AD801 /* Splash */,
 				38C13BB816E9F5C1005AD801 /* Login */,
 				38C13BB916E9F5CD005AD801 /* SignUp */,
-				38C13BA816E9DE79005AD801 /* RaceMeetings */,
-				38C13BA916E9DE80005AD801 /* PurchasedIssues */,
 				38C13B9616E9D17D005AD801 /* Settings */,
+				3804EEE616EA499700820B78 /* MainViews */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -1179,6 +1267,11 @@
 				38C13BB716E9E16E005AD801 /* README.md in Resources */,
 				38C13BBE16E9F5DA005AD801 /* PPLoginViewController.xib in Resources */,
 				38C13BC316E9F86A005AD801 /* PPSignUpViewController.xib in Resources */,
+				3804EEEC16EA49C100820B78 /* PPRaceCardViewController.xib in Resources */,
+				3804EEF216EA4AE400820B78 /* PPVideoViewController.xib in Resources */,
+				3804EEF816EA4D1600820B78 /* PPHorseDetailsViewController.xib in Resources */,
+				3804EEFF16EA4F1600820B78 /* PPJockeyDetailsViewController.xib in Resources */,
+				3804EF0416EA4F2000820B78 /* PPTrainerDetailsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1296,6 +1389,11 @@
 				38C13BB616E9E16E005AD801 /* GCDispatchQueue.m in Sources */,
 				38C13BBD16E9F5DA005AD801 /* PPLoginViewController.m in Sources */,
 				38C13BC216E9F86A005AD801 /* PPSignUpViewController.m in Sources */,
+				3804EEEB16EA49C100820B78 /* PPRaceCardViewController.m in Sources */,
+				3804EEF116EA4AE400820B78 /* PPVideoViewController.m in Sources */,
+				3804EEF716EA4D1600820B78 /* PPHorseDetailsViewController.m in Sources */,
+				3804EEFE16EA4F1600820B78 /* PPJockeyDetailsViewController.m in Sources */,
+				3804EF0316EA4F2000820B78 /* PPTrainerDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

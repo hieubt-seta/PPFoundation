@@ -7,6 +7,7 @@
 //
 
 #import "PPRaceMeetingsController.h"
+#import "PPRaceCardViewController.h"
 
 @interface PPRaceMeetingsController ()
 
@@ -53,10 +54,10 @@
 - (void)setupBarButtonItems
 {
     if (self.PP_SESSION.isAuthenticated) {
-        self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithTitle:@"User Logged In" style:UIBarButtonItemStyleBordered target:nil action:nil] autorelease];
+        self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithTitle:LSSTRING(@"User Logged In") style:UIBarButtonItemStyleBordered target:nil action:nil] autorelease];
         self.navigationItem.rightBarButtonItem.enabled = NO;
     } else {
-        self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithTitle:@"Login" style:UIBarButtonItemStyleBordered target:self action:@selector(menuItemLoginClicked:)] autorelease];
+        self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithTitle:LSSTRING(@"Login") style:UIBarButtonItemStyleBordered target:self action:@selector(menuItemLoginClicked:)] autorelease];
         self.navigationItem.rightBarButtonItem.enabled = YES;
     }
 }
@@ -86,6 +87,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    PPRaceCardViewController *vc = [[[PPRaceCardViewController alloc] initWithNibName:@"PPRaceCardViewController" bundle:nil] autorelease];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)dealloc {
