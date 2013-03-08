@@ -1,18 +1,18 @@
 //
-//  PPViewController.m
+//  PPSplashViewController.m
 //  PPLibrary
 //
 //  Created by Hieu Bui on 10/17/12.
 //  Copyright (c) 2012 PIPU. All rights reserved.
 //
 
-#import "PPViewController.h"
+#import "PPSplashViewController.h"
 
-@interface PPViewController ()
+@interface PPSplashViewController ()
 
 @end
 
-@implementation PPViewController
+@implementation PPSplashViewController
 
 - (void)viewDidLoad
 {

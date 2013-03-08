@@ -268,6 +268,9 @@ typedef enum {
     }
     
     if(self.panDirection == MFSideMenuPanDirectionLeft) {
+        if (self.menuState == MFSideMenuStateClosed) {
+            return;
+        }
         [self handleLeftPan:recognizer];
     } else if(self.panDirection == MFSideMenuPanDirectionRight) {
         [self handleRightPan:recognizer];
@@ -275,7 +278,7 @@ typedef enum {
 }
 
 - (void) handleRightPan:(UIPanGestureRecognizer *)recognizer {
-    if(!self.leftSideMenuViewController) return;
+//    if(!self.leftSideMenuViewController) return;
     
     UIView *view = self.rootViewController.view;
     
@@ -329,7 +332,7 @@ typedef enum {
 }
 
 - (void) handleLeftPan:(UIPanGestureRecognizer *)recognizer {
-    if(!self.rightSideMenuViewController) return;
+//    if(!self.rightSideMenuViewController) return;
     
     UIView *view = self.rootViewController.view;
     

@@ -1,5 +1,5 @@
 //
-//  PPViewController.h
+//  PPSplashViewController.h
 //  PPLibrary
 //
 //  Created by Hieu Bui on 10/17/12.
@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PPBaseViewController.h"
 
-@interface PPViewController : UIViewController
+@interface PPSplashViewController : PPBaseViewController
 
 @end

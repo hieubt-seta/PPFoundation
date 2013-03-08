@@ -7,24 +7,37 @@
 //
 
 #import "PPAppDelegate.h"
-#import "PPViewController.h"
+#import "PPSplashViewController.h"
+#import "PPSideMenuViewController.h"
+#import "PPMainViewController.h"
 
 @implementation PPAppDelegate
 
 - (void)dealloc
 {
     [_window release];
-    [_viewController release];
+    [_sideMenuViewController release];
     [super dealloc];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+    
     // Override point for customization after application launch.
-    self.viewController = [[[PPViewController alloc] initWithNibName:@"PPViewController" bundle:nil] autorelease];
-    self.window.rootViewController = self.viewController;
+    self.sideMenuViewController = [[[PPSideMenuViewController alloc] initWithNibName:@"PPSideMenuViewController" bundle:nil] autorelease];
+    
+    self.mainViewController = [[[PPMainViewController alloc] initWithNibName:@"PPMainViewController" bundle:nil] autorelease];
+    
+    self.navigationController = [[[UINavigationController alloc] initWithRootViewController:self.mainViewController] autorelease];
+    
+    [MFSideMenu menuWithNavigationController:self.navigationController
+                      leftSideMenuController:self.sideMenuViewController
+                     rightSideMenuController:nil];
+    
+    self.window.rootViewController = self.navigationController;
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

@@ -18,8 +18,8 @@
 		386FAC5D162EFD6800305B33 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 386FAC5C162EFD6800305B33 /* Default.png */; };
 		386FAC5F162EFD6800305B33 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 386FAC5E162EFD6800305B33 /* Default@2x.png */; };
 		386FAC61162EFD6800305B33 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 386FAC60162EFD6800305B33 /* Default-568h@2x.png */; };
-		386FAC64162EFD6800305B33 /* PPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 386FAC63162EFD6800305B33 /* PPViewController.m */; };
-		386FAC67162EFD6800305B33 /* PPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 386FAC65162EFD6800305B33 /* PPViewController.xib */; };
+		386FAC64162EFD6800305B33 /* PPSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 386FAC63162EFD6800305B33 /* PPSplashViewController.m */; };
+		386FAC67162EFD6800305B33 /* PPSplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 386FAC65162EFD6800305B33 /* PPSplashViewController.xib */; };
 		386FAC8A162EFD8F00305B33 /* Base64Transcoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 386FAC88162EFD8F00305B33 /* Base64Transcoder.c */; };
 		386FAC8F162EFD9600305B33 /* GraphicFilter.c in Sources */ = {isa = PBXBuildFile; fileRef = 386FAC8D162EFD9600305B33 /* GraphicFilter.c */; };
 		386FACA3162EFD9E00305B33 /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 386FAC92162EFD9E00305B33 /* GTMNSString+HTML.m */; };
@@ -115,6 +115,11 @@
 		38C13B7516E8F73D005AD801 /* MagicalRecord+Setup.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C13B5716E8F73D005AD801 /* MagicalRecord+Setup.m */; };
 		38C13B7616E8F73D005AD801 /* MagicalRecord+ShorthandSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C13B5916E8F73D005AD801 /* MagicalRecord+ShorthandSupport.m */; };
 		38C13B7716E8F73D005AD801 /* MagicalRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C13B5B16E8F73D005AD801 /* MagicalRecord.m */; };
+		38C13B7A16E8F843005AD801 /* PPBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C13B7916E8F843005AD801 /* PPBaseViewController.m */; };
+		38C13B7E16E8F8A9005AD801 /* PPSideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C13B7C16E8F8A9005AD801 /* PPSideMenuViewController.m */; };
+		38C13B7F16E8F8A9005AD801 /* PPSideMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38C13B7D16E8F8A9005AD801 /* PPSideMenuViewController.xib */; };
+		38C13B8316E8FBB9005AD801 /* PPMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C13B8116E8FBB8005AD801 /* PPMainViewController.m */; };
+		38C13B8416E8FBB9005AD801 /* PPMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38C13B8216E8FBB8005AD801 /* PPMainViewController.xib */; };
 		38E72F7316303FA000E0552C /* PPTapDetectingWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E72F7216303FA000E0552C /* PPTapDetectingWindow.m */; };
 /* End PBXBuildFile section */
 
@@ -136,9 +141,9 @@
 		386FAC5C162EFD6800305B33 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		386FAC5E162EFD6800305B33 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		386FAC60162EFD6800305B33 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		386FAC62162EFD6800305B33 /* PPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPViewController.h; sourceTree = "<group>"; };
-		386FAC63162EFD6800305B33 /* PPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPViewController.m; sourceTree = "<group>"; };
-		386FAC66162EFD6800305B33 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PPViewController.xib; sourceTree = "<group>"; };
+		386FAC62162EFD6800305B33 /* PPSplashViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPSplashViewController.h; sourceTree = "<group>"; };
+		386FAC63162EFD6800305B33 /* PPSplashViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPSplashViewController.m; sourceTree = "<group>"; };
+		386FAC66162EFD6800305B33 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PPSplashViewController.xib; sourceTree = "<group>"; };
 		386FAC6E162EFD6900305B33 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		386FAC85162EFD7500305B33 /* PPLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPLibrary.h; sourceTree = "<group>"; };
 		386FAC86162EFD7500305B33 /* PPMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPMacros.h; sourceTree = "<group>"; };
@@ -332,6 +337,14 @@
 		38C13B5B16E8F73D005AD801 /* MagicalRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicalRecord.m; sourceTree = "<group>"; };
 		38C13B5C16E8F73D005AD801 /* MagicalRecordShorthand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicalRecordShorthand.h; sourceTree = "<group>"; };
 		38C13B5D16E8F73D005AD801 /* CoreData+MagicalRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CoreData+MagicalRecord.h"; sourceTree = "<group>"; };
+		38C13B7816E8F843005AD801 /* PPBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPBaseViewController.h; sourceTree = "<group>"; };
+		38C13B7916E8F843005AD801 /* PPBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPBaseViewController.m; sourceTree = "<group>"; };
+		38C13B7B16E8F8A9005AD801 /* PPSideMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSideMenuViewController.h; sourceTree = "<group>"; };
+		38C13B7C16E8F8A9005AD801 /* PPSideMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSideMenuViewController.m; sourceTree = "<group>"; };
+		38C13B7D16E8F8A9005AD801 /* PPSideMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PPSideMenuViewController.xib; sourceTree = "<group>"; };
+		38C13B8016E8FBB8005AD801 /* PPMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPMainViewController.h; sourceTree = "<group>"; };
+		38C13B8116E8FBB8005AD801 /* PPMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPMainViewController.m; sourceTree = "<group>"; };
+		38C13B8216E8FBB8005AD801 /* PPMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PPMainViewController.xib; sourceTree = "<group>"; };
 		38E72F7116303FA000E0552C /* PPTapDetectingWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPTapDetectingWindow.h; sourceTree = "<group>"; };
 		38E72F7216303FA000E0552C /* PPTapDetectingWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPTapDetectingWindow.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -773,9 +786,17 @@
 		38B3E4B4168DFAD6006856F9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				386FAC62162EFD6800305B33 /* PPViewController.h */,
-				386FAC63162EFD6800305B33 /* PPViewController.m */,
-				386FAC65162EFD6800305B33 /* PPViewController.xib */,
+				38C13B7816E8F843005AD801 /* PPBaseViewController.h */,
+				38C13B7916E8F843005AD801 /* PPBaseViewController.m */,
+				386FAC62162EFD6800305B33 /* PPSplashViewController.h */,
+				386FAC63162EFD6800305B33 /* PPSplashViewController.m */,
+				386FAC65162EFD6800305B33 /* PPSplashViewController.xib */,
+				38C13B7B16E8F8A9005AD801 /* PPSideMenuViewController.h */,
+				38C13B7C16E8F8A9005AD801 /* PPSideMenuViewController.m */,
+				38C13B7D16E8F8A9005AD801 /* PPSideMenuViewController.xib */,
+				38C13B8016E8FBB8005AD801 /* PPMainViewController.h */,
+				38C13B8116E8FBB8005AD801 /* PPMainViewController.m */,
+				38C13B8216E8FBB8005AD801 /* PPMainViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -993,7 +1014,9 @@
 				386FAC5D162EFD6800305B33 /* Default.png in Resources */,
 				386FAC5F162EFD6800305B33 /* Default@2x.png in Resources */,
 				386FAC61162EFD6800305B33 /* Default-568h@2x.png in Resources */,
-				386FAC67162EFD6800305B33 /* PPViewController.xib in Resources */,
+				386FAC67162EFD6800305B33 /* PPSplashViewController.xib in Resources */,
+				38C13B7F16E8F8A9005AD801 /* PPSideMenuViewController.xib in Resources */,
+				38C13B8416E8FBB9005AD801 /* PPMainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1006,7 +1029,7 @@
 			files = (
 				386FAC57162EFD6800305B33 /* main.m in Sources */,
 				386FAC5B162EFD6800305B33 /* PPAppDelegate.m in Sources */,
-				386FAC64162EFD6800305B33 /* PPViewController.m in Sources */,
+				386FAC64162EFD6800305B33 /* PPSplashViewController.m in Sources */,
 				386FAC8A162EFD8F00305B33 /* Base64Transcoder.c in Sources */,
 				386FAC8F162EFD9600305B33 /* GraphicFilter.c in Sources */,
 				386FACA3162EFD9E00305B33 /* GTMNSString+HTML.m in Sources */,
@@ -1099,6 +1122,9 @@
 				38C13B7516E8F73D005AD801 /* MagicalRecord+Setup.m in Sources */,
 				38C13B7616E8F73D005AD801 /* MagicalRecord+ShorthandSupport.m in Sources */,
 				38C13B7716E8F73D005AD801 /* MagicalRecord.m in Sources */,
+				38C13B7A16E8F843005AD801 /* PPBaseViewController.m in Sources */,
+				38C13B7E16E8F8A9005AD801 /* PPSideMenuViewController.m in Sources */,
+				38C13B8316E8FBB9005AD801 /* PPMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1113,12 +1139,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		386FAC65162EFD6800305B33 /* PPViewController.xib */ = {
+		386FAC65162EFD6800305B33 /* PPSplashViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				386FAC66162EFD6800305B33 /* en */,
 			);
-			name = PPViewController.xib;
+			name = PPSplashViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
