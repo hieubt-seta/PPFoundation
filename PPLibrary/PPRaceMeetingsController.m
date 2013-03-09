@@ -53,7 +53,7 @@
 
 - (void)setupBarButtonItems
 {
-    if (self.PP_SESSION.isAuthenticated) {
+    if (self.PPSESSION.isAuthenticated) {
         self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithTitle:LSSTRING(@"User Logged In") style:UIBarButtonItemStyleBordered target:nil action:nil] autorelease];
         self.navigationItem.rightBarButtonItem.enabled = NO;
     } else {

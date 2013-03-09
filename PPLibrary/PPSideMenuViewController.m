@@ -67,7 +67,7 @@
 
 - (void)setupMenuItems
 {
-    if (self.PP_SESSION.isAuthenticated) {
+    if (self.PPSESSION.isAuthenticated) {
         self.menuItems = @[LSSTRING(@"Race Mettings"), LSSTRING(@"Purchased Items"), LSSTRING(@"Settings"), LSSTRING(@"Language")];
     } else {
         self.menuItems = @[LSSTRING(@"Race Mettings"), LSSTRING(@"Settings"), LSSTRING(@"Language")];
@@ -92,9 +92,14 @@
     UITableViewCell *cell = (id)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (!cell) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-        UISwitch *switchview = [[UISwitch alloc] initWithFrame:CGRectZero];
+        UISwitch *switchview = [[[UISwitch alloc] initWithFrame:CGRectZero] autorelease];
+        [switchview addTarget:self action:@selector(switchDidChangeState:) forControlEvents:UIControlEventTouchUpInside];
+        if (self.PPSETTINGS.currentLanguage == PPAppLanguageEnglish) {
+            [switchview setOn:YES];
+        } else {
+            [switchview setOn:NO];
+        }
         cell.accessoryView = switchview;
-        [switchview release];
     }
     cell.textLabel.text = [self.menuItems objectAtIndex:indexPath.row];
     cell.accessoryView.hidden = YES;
@@ -105,11 +110,21 @@
     return cell;
 }
 
+- (void)switchDidChangeState:(id)sender
+{
+    UISwitch *switchView = (id)sender;
+    if (switchView.isOn) {
+        [self.PPSETTINGS setCurrentLanguage:PPAppLanguageEnglish];
+    } else {
+        [self.PPSETTINGS setCurrentLanguage:PPAppLanguageChinese];
+    }
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    if (self.PP_SESSION.isAuthenticated) {
+    if (self.PPSESSION.isAuthenticated) {
         switch (indexPath.row) {
             case 0: // Race meetings
                 [self gotoRaceMeetingsView];

@@ -83,7 +83,6 @@
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-    DLog(@"KeyPath-Change: %@, %@", keyPath, change);
     [[NSNotificationCenter defaultCenter] postNotificationName:kAppOpenFromStateDidChangeNotification object:[NSNumber numberWithInteger:self.appOpenFromState]];
 }
 

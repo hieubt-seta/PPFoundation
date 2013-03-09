@@ -53,7 +53,8 @@
 
 - (void)customInitialization
 {
-    self.PP_SESSION = [PPSession sharedPPSession];
+    self.PPSESSION = [PPSession sharedPPSession];
+    self.PPSETTINGS = [PPSettingsManager sharedPPSettingsManager];
 }
 
 - (void)viewDidLoad

@@ -41,7 +41,7 @@
     [self.progressHUD showAnimated:YES whileExecutingBlock:^{
         sleep(2);
     } completionBlock:^{
-        self.PP_SESSION.isAuthenticated = YES;
+        self.PPSESSION.isAuthenticated = YES;
         [self.appDelegate showRaceMeetingView];
     }];
 }

@@ -11,13 +11,15 @@
 #import "UINavigationController+MFSideMenu.h"
 #import "PPAppDelegate.h"
 #import "PPSession.h"
+#import "PPSettingsManager.h"
 #import "MBProgressHUD.h"
 
 @interface PPBaseViewController : UIViewController
 
 @property (strong, nonatomic) PPAppDelegate *appDelegate;
-@property (strong, nonatomic) PPSession *PP_SESSION;
 @property (strong, nonatomic) MBProgressHUD *progressHUD;
+@property (strong, nonatomic) PPSession *PPSESSION;
+@property (strong, nonatomic) PPSettingsManager *PPSETTINGS;
 
 - (void)registerNotifications;
 - (void)unregisterNotifications;
