@@ -167,6 +167,7 @@
 		3819FCFD168ED0E500F98D4E /* PPFontsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPFontsHelper.m; sourceTree = "<group>"; };
 		3819FD04168F21D300F98D4E /* PPBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPBaseRequest.h; sourceTree = "<group>"; };
 		3819FD05168F21D300F98D4E /* PPBaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPBaseRequest.m; sourceTree = "<group>"; };
+		383E564A16EB896B00D45AB3 /* PPLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPLogging.h; sourceTree = "<group>"; };
 		386FAC46162EFD6800305B33 /* winner21.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = winner21.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		386FAC4A162EFD6800305B33 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		386FAC4C162EFD6800305B33 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -207,7 +208,6 @@
 		386FACA0162EFD9E00305B33 /* UITabBarController+HideTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarController+HideTabBar.m"; sourceTree = "<group>"; };
 		386FACA1162EFD9E00305B33 /* UIView+Animatable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Animatable.h"; sourceTree = "<group>"; };
 		386FACA2162EFD9E00305B33 /* UIView+Animatable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Animatable.m"; sourceTree = "<group>"; };
-		386FACB6162EFDB900305B33 /* PPLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPLogging.h; sourceTree = "<group>"; };
 		386FACB7162EFDE400305B33 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		386FACC5162F00B200305B33 /* PPDeviceUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPDeviceUtil.m; sourceTree = "<group>"; };
 		386FACC6162F00B200305B33 /* PPDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPDownloader.h; sourceTree = "<group>"; };
@@ -495,22 +495,22 @@
 			name = TrainerDetails;
 			sourceTree = "<group>";
 		};
-		3819FCFF168ED13700F98D4E /* CoreDataHelper */ = {
+		3819FCFF168ED13700F98D4E /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
 				386FAD7E162F07EA00305B33 /* PPCoreDataHelper.h */,
 				386FAD7F162F07EA00305B33 /* PPCoreDataHelper.m */,
 			);
-			name = CoreDataHelper;
+			name = CoreData;
 			sourceTree = "<group>";
 		};
-		3819FD00168ED14600F98D4E /* InAppPurchase */ = {
+		3819FD00168ED14600F98D4E /* IAP */ = {
 			isa = PBXGroup;
 			children = (
 				386FAD6C162F072E00305B33 /* PPIAPHelper.h */,
 				386FAD6D162F072F00305B33 /* PPIAPHelper.m */,
 			);
-			name = InAppPurchase;
+			name = IAP;
 			sourceTree = "<group>";
 		};
 		3819FD01168F219F00F98D4E /* Requests */ = {
@@ -527,6 +527,76 @@
 			children = (
 			);
 			name = Responses;
+			sourceTree = "<group>";
+		};
+		383E564216EB886E00D45AB3 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = DataManager;
+			sourceTree = "<group>";
+		};
+		383E564316EB887D00D45AB3 /* Devices */ = {
+			isa = PBXGroup;
+			children = (
+				386FAD1C162F032B00305B33 /* PPDeviceUtil.h */,
+				386FACC5162F00B200305B33 /* PPDeviceUtil.m */,
+			);
+			name = Devices;
+			sourceTree = "<group>";
+		};
+		383E564416EB888700D45AB3 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				386FACC8162F00B200305B33 /* PPFileUtil.h */,
+				386FAD19162F02F000305B33 /* PPFileUtil.m */,
+			);
+			name = Files;
+			sourceTree = "<group>";
+		};
+		383E564516EB888E00D45AB3 /* Downloader */ = {
+			isa = PBXGroup;
+			children = (
+				386FACC6162F00B200305B33 /* PPDownloader.h */,
+				386FACC7162F00B200305B33 /* PPDownloader.m */,
+			);
+			name = Downloader;
+			sourceTree = "<group>";
+		};
+		383E564616EB889700D45AB3 /* LocalNotification */ = {
+			isa = PBXGroup;
+			children = (
+				386FAD1D162F037700305B33 /* PPLocalNotificationHelper.h */,
+				386FACCB162F00B200305B33 /* PPLocalNotificationHelper.m */,
+			);
+			name = LocalNotification;
+			sourceTree = "<group>";
+		};
+		383E564716EB88A100D45AB3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3819FCFC168ED0E400F98D4E /* PPFontsHelper.h */,
+				3819FCFD168ED0E500F98D4E /* PPFontsHelper.m */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		383E564816EB88A900D45AB3 /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				38C13B8816E9A52F005AD801 /* PPValidator.h */,
+				38C13B8916E9A52F005AD801 /* PPValidator.m */,
+			);
+			name = Validators;
+			sourceTree = "<group>";
+		};
+		383E564916EB891E00D45AB3 /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+				386FAC86162EFD7500305B33 /* PPMacros.h */,
+				383E564A16EB896B00D45AB3 /* PPLogging.h */,
+			);
+			name = Macro;
 			sourceTree = "<group>";
 		};
 		386FAC3B162EFD6800305B33 = {
@@ -574,7 +644,7 @@
 				38B3E4B5168DFAE1006856F9 /* Models */,
 				38B3E4B6168DFAE6006856F9 /* Views */,
 				38B3E4B4168DFAD6006856F9 /* Controllers */,
-				386FACB5162EFDAB00305B33 /* Helpers&Utils */,
+				386FACB5162EFDAB00305B33 /* Helpers */,
 			);
 			name = Classes;
 			path = PPLibrary;
@@ -610,29 +680,22 @@
 			name = Categories;
 			sourceTree = "<group>";
 		};
-		386FACB5162EFDAB00305B33 /* Helpers&Utils */ = {
+		386FACB5162EFDAB00305B33 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				3819FD00168ED14600F98D4E /* InAppPurchase */,
-				3819FCFF168ED13700F98D4E /* CoreDataHelper */,
+				383E564916EB891E00D45AB3 /* Macro */,
+				383E564816EB88A900D45AB3 /* Validators */,
+				383E564716EB88A100D45AB3 /* Fonts */,
+				383E564616EB889700D45AB3 /* LocalNotification */,
+				383E564516EB888E00D45AB3 /* Downloader */,
+				383E564416EB888700D45AB3 /* Files */,
+				383E564316EB887D00D45AB3 /* Devices */,
+				3819FD00168ED14600F98D4E /* IAP */,
+				3819FCFF168ED13700F98D4E /* CoreData */,
 				387F1291163050B800A9EA82 /* ViewUtils */,
 				386FAD51162F05D600305B33 /* Quartz */,
-				386FAC86162EFD7500305B33 /* PPMacros.h */,
-				386FACB6162EFDB900305B33 /* PPLogging.h */,
-				386FAD1C162F032B00305B33 /* PPDeviceUtil.h */,
-				386FACC5162F00B200305B33 /* PPDeviceUtil.m */,
-				386FACC8162F00B200305B33 /* PPFileUtil.h */,
-				386FAD19162F02F000305B33 /* PPFileUtil.m */,
-				386FACC6162F00B200305B33 /* PPDownloader.h */,
-				386FACC7162F00B200305B33 /* PPDownloader.m */,
-				386FAD1D162F037700305B33 /* PPLocalNotificationHelper.h */,
-				386FACCB162F00B200305B33 /* PPLocalNotificationHelper.m */,
-				3819FCFC168ED0E400F98D4E /* PPFontsHelper.h */,
-				3819FCFD168ED0E500F98D4E /* PPFontsHelper.m */,
-				38C13B8816E9A52F005AD801 /* PPValidator.h */,
-				38C13B8916E9A52F005AD801 /* PPValidator.m */,
 			);
-			name = "Helpers&Utils";
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 		386FACBD162EFFFD00305B33 /* UI */ = {
@@ -904,7 +967,7 @@
 			isa = PBXGroup;
 			children = (
 				38C13B8716E99D07005AD801 /* Base */,
-				38C13BC416E9FAA3005AD801 /* SideMenu */,
+				38C13BC416E9FAA3005AD801 /* Menu */,
 				38C13B8516E99CE2005AD801 /* Splash */,
 				38C13BB816E9F5C1005AD801 /* Login */,
 				38C13BB916E9F5CD005AD801 /* SignUp */,
@@ -924,7 +987,6 @@
 		38B3E4B6168DFAE6006856F9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				38C13B9516E9CDF3005AD801 /* CustomCells */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -1109,6 +1171,7 @@
 			isa = PBXGroup;
 			children = (
 				38C13B9016E9C258005AD801 /* SettingManager */,
+				383E564216EB886E00D45AB3 /* DataManager */,
 				38B3E4CC168E0124006856F9 /* NetworkManager */,
 			);
 			name = Managers;
@@ -1121,13 +1184,6 @@
 				38B3E4DF168E0755006856F9 /* PPSettingsManager.m */,
 			);
 			name = SettingManager;
-			sourceTree = "<group>";
-		};
-		38C13B9516E9CDF3005AD801 /* CustomCells */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = CustomCells;
 			sourceTree = "<group>";
 		};
 		38C13B9616E9D17D005AD801 /* Settings */ = {
@@ -1193,14 +1249,14 @@
 			name = SignUp;
 			sourceTree = "<group>";
 		};
-		38C13BC416E9FAA3005AD801 /* SideMenu */ = {
+		38C13BC416E9FAA3005AD801 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
 				38C13B7B16E8F8A9005AD801 /* PPSideMenuViewController.h */,
 				38C13B7C16E8F8A9005AD801 /* PPSideMenuViewController.m */,
 				38C13B7D16E8F8A9005AD801 /* PPSideMenuViewController.xib */,
 			);
-			name = SideMenu;
+			name = Menu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

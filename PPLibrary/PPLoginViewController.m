@@ -30,6 +30,18 @@
     self.title = LSSTRING(@"Login");
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self registerForKeyboardNotifications];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [self viewWillDisappear:animated];
+    [self unregisterForKeyboardNotifications];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -66,9 +78,12 @@
     return YES;
 }
 
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+}
+
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
-    
 }
 
 @end

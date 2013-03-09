@@ -30,5 +30,6 @@
 - (void)showMessage:(NSString *)message withTitle:(NSString *)title andDelegate:(id)delegate;
 - (void)showMessage:(NSString *)message withTitle:(NSString *)title delegate:(id)delegate andTag:(NSInteger)tag;
 - (void)showMessage:(NSString *)message withTitle:(NSString *)title cancelButtonTitle:(NSString *)cancelTitle otherButtonTitles:(NSString *)otherTitle delegate:(id)delegate andTag:(NSInteger)tag;
-
+- (void)registerForKeyboardNotifications;
+- (void)unregisterForKeyboardNotifications;
 @end

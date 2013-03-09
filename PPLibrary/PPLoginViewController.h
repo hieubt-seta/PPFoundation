@@ -12,6 +12,7 @@
 
 @property (retain, nonatomic) IBOutlet UITextField *txtEmail;
 @property (retain, nonatomic) IBOutlet UITextField *txtPassword;
+
 - (IBAction)btnLoginClicked:(id)sender;
 
 @end
