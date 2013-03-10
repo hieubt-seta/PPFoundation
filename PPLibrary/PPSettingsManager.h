@@ -17,10 +17,8 @@ typedef enum {
 
 @property (nonatomic, retain) NSUserDefaults *userDefaults;
 @property (nonatomic, assign) PPAppLanguage currentLanguage;
+@property (nonatomic, assign) BOOL isFirstTimeOpenApp;
 
 + (PPSettingsManager *)sharedPPSettingsManager;
-
-- (BOOL)isFirstTimeOpenApp;
-- (void)removeIsFirstTimeOpenApp;
 
 @end

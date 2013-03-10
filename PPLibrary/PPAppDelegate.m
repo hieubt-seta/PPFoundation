@@ -65,8 +65,8 @@
     [self addObserver:self forKeyPath:@"appOpenFromState" options:NSKeyValueObservingOptionInitial context:nil];
     
     if ([[PPSettingsManager sharedPPSettingsManager] isFirstTimeOpenApp]) {
+        [[PPSettingsManager sharedPPSettingsManager] setIsFirstTimeOpenApp:NO];
         self.appOpenFromState = PPOpenAppFromInitializeState;
-        [[PPSettingsManager sharedPPSettingsManager] removeIsFirstTimeOpenApp];
     } else {
         self.appOpenFromState = PPOpenAppFromClosedState;
     }

@@ -10,8 +10,9 @@
 
 @implementation PPSettingsManager
 
-@synthesize userDefaults = _userDefaults;
-@synthesize currentLanguage = _currentLanguage;
+@synthesize userDefaults                = _userDefaults;
+@synthesize currentLanguage             = _currentLanguage;
+@synthesize isFirstTimeOpenApp          = _isFirstTimeOpenApp;
 
 SYNTHESIZE_SINGLETON_FOR_CLASS(PPSettingsManager)
 
@@ -29,23 +30,27 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(PPSettingsManager)
 {
     if (![self.userDefaults objectForKey:kCurrentAppLanguage]) {
         self.currentLanguage = PPAppLanguageEnglish;
-    } else {
-        self.currentLanguage = [self.userDefaults integerForKey:kCurrentAppLanguage];
+    }
+    
+    if (![self.userDefaults objectForKey:kIsTheFirstTimeOpenApp]) {
+        [self.userDefaults setBool:YES forKey:kIsTheFirstTimeOpenApp];
     }
 }
 
 - (BOOL)isFirstTimeOpenApp
 {
-    if (![_userDefaults objectForKey:kDidOpenAppForTheFirstTime]) {
-        return YES;
-    }
-    return NO;
+    return [self.userDefaults boolForKey:kIsTheFirstTimeOpenApp];
 }
 
-- (void)removeIsFirstTimeOpenApp
+- (void)setIsFirstTimeOpenApp:(BOOL)isFirstTimeOpenApp
 {
-    [_userDefaults setBool:YES forKey:kDidOpenAppForTheFirstTime];
-    [_userDefaults synchronize];
+    [self.userDefaults setBool:isFirstTimeOpenApp forKey:kIsTheFirstTimeOpenApp];
+    [self.userDefaults synchronize];
+}
+
+- (PPAppLanguage)currentLanguage
+{
+    return [self.userDefaults integerForKey:kCurrentAppLanguage];
 }
 
 - (void)setCurrentLanguage:(PPAppLanguage)currentLanguage

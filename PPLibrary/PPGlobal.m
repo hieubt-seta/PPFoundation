@@ -9,7 +9,7 @@
 #import "PPGlobal.h"
 
 // Define Common Keys
-NSString * const kDidOpenAppForTheFirstTime                     = @"kAuthenticationStatusDidChangeNotification";
+NSString * const kIsTheFirstTimeOpenApp                         = @"kIsTheFirstTimeOpenApp";
 NSString * const kCurrentAppLanguage                            = @"kCurrentAppLanguage";
 
 // Define Notification Keys

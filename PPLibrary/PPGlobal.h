@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-extern NSString * const kDidOpenAppForTheFirstTime;
+extern NSString * const kIsTheFirstTimeOpenApp;
 extern NSString * const kCurrentAppLanguage;
 
 // Define Notification Keys
