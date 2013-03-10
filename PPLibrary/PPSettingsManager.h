@@ -21,6 +21,6 @@ typedef enum {
 + (PPSettingsManager *)sharedPPSettingsManager;
 
 - (BOOL)isFirstTimeOpenApp;
-- (void)setDidOpenAppForTheFirstTime;
+- (void)removeIsFirstTimeOpenApp;
 
 @end

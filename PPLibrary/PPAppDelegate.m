@@ -14,7 +14,7 @@
 
 @interface PPAppDelegate()
 {
-    BOOL _isFirstTime;
+    BOOL _isFirstTimeShowingSplash;
 }
 @end
 
@@ -33,8 +33,8 @@
 {
     PPSplashViewController *vc = [[[PPSplashViewController alloc] initWithNibName:@"PPSplashViewController" bundle:nil] autorelease];
     UINavigationController *nav = [[[UINavigationController alloc] initWithRootViewController:vc] autorelease];
-    if (_isFirstTime) {
-        _isFirstTime = NO;
+    if (_isFirstTimeShowingSplash) {
+        _isFirstTimeShowingSplash = NO;
         [self.sideMenu.navigationController presentModalViewController:nav animated:NO];
     } else {
         [self.sideMenu.navigationController presentModalViewController:nav animated:YES];
@@ -60,12 +60,13 @@
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     
     // Override point for customization after application launch.
-    _isFirstTime = YES;
+    _isFirstTimeShowingSplash = YES;
     
     [self addObserver:self forKeyPath:@"appOpenFromState" options:NSKeyValueObservingOptionInitial context:nil];
     
     if ([[PPSettingsManager sharedPPSettingsManager] isFirstTimeOpenApp]) {
         self.appOpenFromState = PPOpenAppFromInitializeState;
+        [[PPSettingsManager sharedPPSettingsManager] removeIsFirstTimeOpenApp];
     } else {
         self.appOpenFromState = PPOpenAppFromClosedState;
     }
