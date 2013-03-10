@@ -31,12 +31,18 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.title = LSSTRING(@"Race Meetings");
     [self setupBarButtonItems];
+}
+
+- (void)localizeStrings
+{
+    [super localizeStrings];
+    self.title = LSSTRING(@"Race Meetings");
 }
 
 - (void)registerNotifications
 {
+    [super registerNotifications];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(authenticationStatusDidChangeNotification:) name:kAuthenticationStatusDidChangeNotification object:nil];
 }
 

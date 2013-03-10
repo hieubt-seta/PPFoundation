@@ -7,6 +7,7 @@
 //
 
 #import "PPSettingsManager.h"
+#import "LocalizationSystem.h"
 
 @implementation PPSettingsManager
 
@@ -21,15 +22,27 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(PPSettingsManager)
     self = [super init];
     if (self) {
         self.userDefaults = [NSUserDefaults standardUserDefaults];
-        [self initDefaultSettings];
+        [self customInitialization];
     }
     return self;
 }
 
-- (void)initDefaultSettings
+- (void)customInitialization
 {
     if (![self.userDefaults objectForKey:kCurrentAppLanguage]) {
         self.currentLanguage = PPAppLanguageEnglish;
+    }
+    
+    switch (self.currentLanguage) {
+        case PPAppLanguageEnglish:
+            LocalizationSetLanguage(@"English");
+            break;
+        case PPAppLanguageChinese:
+            LocalizationSetLanguage(@"Chinese");
+            break;
+            
+        default:
+            break;
     }
     
     if (![self.userDefaults objectForKey:kIsTheFirstTimeOpenApp]) {
@@ -58,7 +71,18 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(PPSettingsManager)
     _currentLanguage = currentLanguage;
     [self.userDefaults setInteger:currentLanguage forKey:kCurrentAppLanguage];
     [self.userDefaults synchronize];
-    [[NSNotificationCenter defaultCenter] postNotificationName:kAppOpenFromStateDidChangeNotification object:nil];
+    switch (currentLanguage) {
+        case PPAppLanguageEnglish:
+            LocalizationSetLanguage(@"English");
+            break;
+        case PPAppLanguageChinese:
+            LocalizationSetLanguage(@"Chinese");
+            break;
+            
+        default:
+            break;
+    }
+    [[NSNotificationCenter defaultCenter] postNotificationName:kLanguageSettingDidChangeNotification object:nil];
 }
 
 @end

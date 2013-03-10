@@ -13,6 +13,7 @@
 #import "PPSession.h"
 #import "PPSettingsManager.h"
 #import "MBProgressHUD.h"
+#import "LocalizationSystem.h"
 
 @interface PPBaseViewController : UIViewController
 
@@ -32,4 +33,6 @@
 - (void)showMessage:(NSString *)message withTitle:(NSString *)title cancelButtonTitle:(NSString *)cancelTitle otherButtonTitles:(NSString *)otherTitle delegate:(id)delegate andTag:(NSInteger)tag;
 - (void)registerForKeyboardNotifications;
 - (void)unregisterForKeyboardNotifications;
+- (void)localizeStrings;
+
 @end

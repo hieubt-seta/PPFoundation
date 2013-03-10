@@ -61,6 +61,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    [self localizeStrings];
 }
 
 - (void)didReceiveMemoryWarning
@@ -101,7 +102,7 @@
 
 - (void)registerNotifications
 {
-    // Optional
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(languageSettingDidChange:) name:kLanguageSettingDidChangeNotification object:nil];
 }
 
 - (void)unregisterNotifications
@@ -223,6 +224,16 @@
 - (void)keyboardDidHide:(NSNotification *)notification
 {
     //Optional    
+}
+
+- (void)languageSettingDidChange:(NSNotification *)notification
+{
+    [self localizeStrings];
+}
+
+- (void)localizeStrings
+{
+    // Optional
 }
 
 @end

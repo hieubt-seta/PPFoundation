@@ -18,6 +18,9 @@
 		3804EF0316EA4F2000820B78 /* PPTrainerDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3804EF0116EA4F2000820B78 /* PPTrainerDetailsViewController.m */; };
 		3804EF0416EA4F2000820B78 /* PPTrainerDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3804EF0216EA4F2000820B78 /* PPTrainerDetailsViewController.xib */; };
 		3819FCFE168ED0E500F98D4E /* PPFontsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3819FCFD168ED0E500F98D4E /* PPFontsHelper.m */; };
+		383E565116ECD0F400D45AB3 /* LocalizationSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 383E565016ECD0F400D45AB3 /* LocalizationSystem.m */; };
+		383E565316ECD22A00D45AB3 /* genstrings.py in Resources */ = {isa = PBXBuildFile; fileRef = 383E565216ECD22A00D45AB3 /* genstrings.py */; };
+		383E566716ECDD4900D45AB3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 383E566516ECDD4900D45AB3 /* Localizable.strings */; };
 		386FAC4B162EFD6800305B33 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386FAC4A162EFD6800305B33 /* UIKit.framework */; };
 		386FAC4D162EFD6800305B33 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386FAC4C162EFD6800305B33 /* Foundation.framework */; };
 		386FAC4F162EFD6800305B33 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386FAC4E162EFD6800305B33 /* CoreGraphics.framework */; };
@@ -165,6 +168,11 @@
 		3819FCFC168ED0E400F98D4E /* PPFontsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPFontsHelper.h; sourceTree = "<group>"; };
 		3819FCFD168ED0E500F98D4E /* PPFontsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPFontsHelper.m; sourceTree = "<group>"; };
 		383E564A16EB896B00D45AB3 /* PPLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPLogging.h; sourceTree = "<group>"; };
+		383E564F16ECD0F400D45AB3 /* LocalizationSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalizationSystem.h; sourceTree = "<group>"; };
+		383E565016ECD0F400D45AB3 /* LocalizationSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalizationSystem.m; sourceTree = "<group>"; };
+		383E565216ECD22A00D45AB3 /* genstrings.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = genstrings.py; sourceTree = "<group>"; };
+		383E566616ECDD4900D45AB3 /* Chinese */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Chinese; path = Chinese.lproj/Localizable.strings; sourceTree = "<group>"; };
+		383E566816ECDD4E00D45AB3 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		386FAC46162EFD6800305B33 /* winner21.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = winner21.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		386FAC4A162EFD6800305B33 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		386FAC4C162EFD6800305B33 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -589,6 +597,15 @@
 			name = Session;
 			sourceTree = "<group>";
 		};
+		383E564E16ECD0DC00D45AB3 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				383E564F16ECD0F400D45AB3 /* LocalizationSystem.h */,
+				383E565016ECD0F400D45AB3 /* LocalizationSystem.m */,
+			);
+			name = Localization;
+			sourceTree = "<group>";
+		};
 		386FAC3B162EFD6800305B33 = {
 			isa = PBXGroup;
 			children = (
@@ -673,6 +690,7 @@
 		386FACB5162EFDAB00305B33 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				383E564E16ECD0DC00D45AB3 /* Localization */,
 				383E564916EB891E00D45AB3 /* Macro */,
 				383E564816EB88A900D45AB3 /* Validators */,
 				383E564716EB88A100D45AB3 /* Fonts */,
@@ -995,6 +1013,8 @@
 		38B3E4BF168DFC2C006856F9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				383E566516ECDD4900D45AB3 /* Localizable.strings */,
+				383E565216ECD22A00D45AB3 /* genstrings.py */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -1282,6 +1302,10 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				cn,
+				"zh-Hans",
+				Chinese,
+				English,
 			);
 			mainGroup = 386FAC3B162EFD6800305B33;
 			productRefGroup = 386FAC47162EFD6800305B33 /* Products */;
@@ -1315,6 +1339,8 @@
 				3804EEF816EA4D1600820B78 /* PPHorseDetailsViewController.xib in Resources */,
 				3804EEFF16EA4F1600820B78 /* PPJockeyDetailsViewController.xib in Resources */,
 				3804EF0416EA4F2000820B78 /* PPTrainerDetailsViewController.xib in Resources */,
+				383E565316ECD22A00D45AB3 /* genstrings.py in Resources */,
+				383E566716ECDD4900D45AB3 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1436,12 +1462,22 @@
 				3804EEF716EA4D1600820B78 /* PPHorseDetailsViewController.m in Sources */,
 				3804EEFE16EA4F1600820B78 /* PPJockeyDetailsViewController.m in Sources */,
 				3804EF0316EA4F2000820B78 /* PPTrainerDetailsViewController.m in Sources */,
+				383E565116ECD0F400D45AB3 /* LocalizationSystem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		383E566516ECDD4900D45AB3 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				383E566616ECDD4900D45AB3 /* Chinese */,
+				383E566816ECDD4E00D45AB3 /* English */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		386FAC53162EFD6800305B33 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

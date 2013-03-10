@@ -30,8 +30,13 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.title = LSSTRING(@"Sign Up");
     [self registerForKeyboardNotifications];
+}
+
+- (void)localizeStrings
+{
+    [super localizeStrings];
+    self.title = LSSTRING(@"Sign Up");
 }
 
 - (void)keyboardDidShow:(NSNotification *)notification

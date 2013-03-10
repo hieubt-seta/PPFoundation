@@ -39,6 +39,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+}
+
+- (void)localizeStrings
+{
     [self setupMenuItems];
 }
 
@@ -57,6 +61,7 @@
 
 - (void)registerNotifications
 {
+    [super registerNotifications];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(authenticationStatusDidChangeNotification:) name:kAuthenticationStatusDidChangeNotification object:nil];
 }
 
