@@ -68,9 +68,9 @@
 - (void)setupMenuItems
 {
     if (self.PPSESSION.isAuthenticated) {
-        self.menuItems = @[LSSTRING(@"Race Mettings"), LSSTRING(@"Purchased Items"), LSSTRING(@"Settings"), LSSTRING(@"Language")];
+        self.menuItems = @[LSSTRING(@"Race Meetings"), LSSTRING(@"Purchased Items"), LSSTRING(@"Settings"), LSSTRING(@"Language")];
     } else {
-        self.menuItems = @[LSSTRING(@"Race Mettings"), LSSTRING(@"Settings"), LSSTRING(@"Language")];
+        self.menuItems = @[LSSTRING(@"Race Meetings"), LSSTRING(@"Settings"), LSSTRING(@"Language")];
     }
     [self.tableView reloadData];
 }

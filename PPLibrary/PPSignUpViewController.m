@@ -13,8 +13,6 @@
     BOOL _isShowingKeyboard;
 }
 
-@property (strong, nonatomic) UITextField *activeTextField;
-
 @end
 
 @implementation PPSignUpViewController
@@ -105,7 +103,6 @@
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
-    self.activeTextField = textField;
     CGPoint pt;
     CGRect rc = [textField bounds];
     rc = [textField convertRect:rc toView:self.scrollView];
@@ -117,6 +114,5 @@
 
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
-    self.activeTextField = nil;
 }
 @end
