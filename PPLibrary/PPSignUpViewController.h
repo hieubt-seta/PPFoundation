@@ -10,5 +10,8 @@
 
 @interface PPSignUpViewController : PPBaseViewController
 
+@property (retain, nonatomic) IBOutlet UIScrollView *scrollView;
+
 - (IBAction)btnSignUpClicked:(id)sender;
+
 @end

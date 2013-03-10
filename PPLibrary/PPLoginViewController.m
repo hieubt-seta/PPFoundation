@@ -9,6 +9,12 @@
 #import "PPLoginViewController.h"
 
 @interface PPLoginViewController ()
+{
+    CGPoint _svos;
+    BOOL _isShowingKeyboard;
+}
+
+@property (strong, nonatomic) UITextField *activeTextField;
 
 @end
 
@@ -28,18 +34,38 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.title = LSSTRING(@"Login");
+    self.scrollView.contentSize = self.scrollView.frame.size;
+    [self registerForKeyboardNotifications];
+}
+
+- (void)keyboardDidShow:(NSNotification *)notification
+{
+    if (_isShowingKeyboard) {
+        return;
+    }
+    _isShowingKeyboard = YES;
+    NSDictionary* info = [notification userInfo];
+    CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    
+    CGRect frame = self.scrollView.frame;
+    frame.size.height -= kbSize.height;
+    self.scrollView.frame = frame;
+}
+
+- (void)keyboardWillHide:(NSNotification *)notification
+{
+    _isShowingKeyboard = NO;
+    NSDictionary* info = [notification userInfo];
+    CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    
+    CGRect frame = self.scrollView.frame;
+    frame.size.height += kbSize.height;
+    self.scrollView.frame = frame;
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [self registerForKeyboardNotifications];
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-    [self viewWillDisappear:animated];
-    [self unregisterForKeyboardNotifications];
 }
 
 - (void)didReceiveMemoryWarning
@@ -61,12 +87,15 @@
 - (void)dealloc {
     [_txtEmail release];
     [_txtPassword release];
+    [_scrollView release];
     [super dealloc];
 }
 
 - (void)viewDidUnload {
+    [self unregisterForKeyboardNotifications];
     [self setTxtEmail:nil];
     [self setTxtPassword:nil];
+    [self setScrollView:nil];
     [super viewDidUnload];
 }
 
@@ -80,10 +109,20 @@
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
+    self.activeTextField = textField;
+    _svos = self.scrollView.contentOffset;
+    CGPoint pt;
+    CGRect rc = [textField bounds];
+    rc = [textField convertRect:rc toView:self.scrollView];
+    pt = rc.origin;
+    pt.x = 0;
+    pt.y -= 80;
+    [self.scrollView setContentOffset:pt animated:YES];
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
+    self.activeTextField = nil;
 }
 
 @end
