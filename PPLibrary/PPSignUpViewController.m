@@ -10,7 +10,6 @@
 
 @interface PPSignUpViewController ()
 {
-    CGPoint _svos;
     BOOL _isShowingKeyboard;
 }
 
@@ -34,7 +33,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.title = LSSTRING(@"Sign Up");
-    self.scrollView.contentSize = self.scrollView.frame.size;
     [self registerForKeyboardNotifications];
 }
 
@@ -61,6 +59,7 @@
     CGRect frame = self.scrollView.frame;
     frame.size.height += kbSize.height;
     self.scrollView.frame = frame;
+    self.scrollView.contentOffset = CGPointZero;
 }
 
 - (void)didReceiveMemoryWarning
@@ -82,10 +81,17 @@
     [_scrollView release];
     [super dealloc];
 }
+
 - (void)viewDidUnload {
     [self unregisterForKeyboardNotifications];
     [self setScrollView:nil];
     [super viewDidUnload];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    self.scrollView.contentSize = self.scrollView.frame.size;
 }
 
 #pragma mark - UITextFieldDelegate
@@ -93,13 +99,13 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [textField resignFirstResponder];
+    [self.scrollView setContentOffset:CGPointZero animated:YES];
     return YES;
 }
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
     self.activeTextField = textField;
-    _svos = self.scrollView.contentOffset;
     CGPoint pt;
     CGRect rc = [textField bounds];
     rc = [textField convertRect:rc toView:self.scrollView];

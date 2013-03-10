@@ -10,7 +10,6 @@
 
 @interface PPLoginViewController ()
 {
-    CGPoint _svos;
     BOOL _isShowingKeyboard;
 }
 
@@ -34,7 +33,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.title = LSSTRING(@"Login");
-    self.scrollView.contentSize = self.scrollView.frame.size;
     [self registerForKeyboardNotifications];
 }
 
@@ -66,6 +64,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    self.scrollView.contentSize = self.scrollView.frame.size;    
 }
 
 - (void)didReceiveMemoryWarning
@@ -104,13 +103,13 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [textField resignFirstResponder];
+    [self.scrollView setContentOffset:CGPointZero animated:YES];
     return YES;
 }
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
     self.activeTextField = textField;
-    _svos = self.scrollView.contentOffset;
     CGPoint pt;
     CGRect rc = [textField bounds];
     rc = [textField convertRect:rc toView:self.scrollView];
