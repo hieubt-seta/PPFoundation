@@ -139,21 +139,21 @@
 }
 
 - (void)showMessage:(NSString *)message withTitle:(NSString *)title {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:LSSTRING(@"OK") otherButtonTitles: nil];
     [alert show];
     [alert release];
 }
 
 - (void)showMessage:(NSString *)message withTitle:(NSString *)title andDelegate:(id)delegate
 {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:delegate cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:delegate cancelButtonTitle:LSSTRING(@"No") otherButtonTitles:LSSTRING(@"Yes"), nil];
     [alert show];
     [alert release];
 }
 
 - (void)showMessage:(NSString *)message withTitle:(NSString *)title delegate:(id)delegate andTag:(NSInteger)tag
 {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:delegate cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:delegate cancelButtonTitle:LSSTRING(@"No") otherButtonTitles:LSSTRING(@"Yes"), nil];
     alert.tag = tag;
     [alert show];
     [alert release];

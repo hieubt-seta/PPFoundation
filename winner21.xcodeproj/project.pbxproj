@@ -690,8 +690,8 @@
 		386FACB5162EFDAB00305B33 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				383E564E16ECD0DC00D45AB3 /* Localization */,
 				383E564916EB891E00D45AB3 /* Macro */,
+				383E564E16ECD0DC00D45AB3 /* Localization */,
 				383E564816EB88A900D45AB3 /* Validators */,
 				383E564716EB88A100D45AB3 /* Fonts */,
 				383E564616EB889700D45AB3 /* LocalNotification */,

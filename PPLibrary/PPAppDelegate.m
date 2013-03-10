@@ -11,6 +11,7 @@
 #import "PPSplashViewController.h"
 #import "PPSideMenuViewController.h"
 #import "PPRaceMeetingsController.h"
+#import "PPMacros.h"
 
 @interface PPAppDelegate()
 {
@@ -35,16 +36,29 @@
     UINavigationController *nav = [[[UINavigationController alloc] initWithRootViewController:vc] autorelease];
     if (_isFirstTimeShowingSplash) {
         _isFirstTimeShowingSplash = NO;
-        [self.sideMenu.navigationController presentModalViewController:nav animated:NO];
+        if ([self.sideMenu.navigationController respondsToSelector:@selector(presentViewController:animated:completion:)]) {
+            [self.sideMenu.navigationController presentViewController:nav animated:NO completion:nil];
+        } else {
+            [self.sideMenu.navigationController presentModalViewController:nav animated:NO];
+        }
+    
     } else {
-        [self.sideMenu.navigationController presentModalViewController:nav animated:YES];
+        if ([self.sideMenu.navigationController respondsToSelector:@selector(presentViewController:animated:completion:)]) {
+            [self.sideMenu.navigationController presentViewController:nav animated:YES completion:nil];
+        } else {
+            [self.sideMenu.navigationController presentModalViewController:nav animated:YES];
+        }
     }
 }
 
 // Show Main View
 - (void)showRaceMeetingView
 {
-    [self.sideMenu.navigationController dismissModalViewControllerAnimated:YES];
+    if ([self.sideMenu.navigationController respondsToSelector:@selector(presentViewController:animated:completion:)]) {
+        [self.sideMenu.navigationController dismissViewControllerAnimated:YES completion:nil];
+    } else {
+        [self.sideMenu.navigationController dismissModalViewControllerAnimated:YES];
+    }
 }
 
 - (void)dealloc
