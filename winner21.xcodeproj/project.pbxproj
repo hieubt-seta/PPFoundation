@@ -146,6 +146,8 @@
 		38C13BBE16E9F5DA005AD801 /* PPLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38C13BBC16E9F5DA005AD801 /* PPLoginViewController.xib */; };
 		38C13BC216E9F86A005AD801 /* PPSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C13BC016E9F86A005AD801 /* PPSignUpViewController.m */; };
 		38C13BC316E9F86A005AD801 /* PPSignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38C13BC116E9F86A005AD801 /* PPSignUpViewController.xib */; };
+		38C3E97616ED79D900E39AD2 /* NSDictionary+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C3E97516ED79D900E39AD2 /* NSDictionary+Additions.m */; };
+		38C3E97916ED7CF800E39AD2 /* NSMutableDictionary+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C3E97816ED7CF800E39AD2 /* NSMutableDictionary+Additions.m */; };
 		38E72F7316303FA000E0552C /* PPTapDetectingWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E72F7216303FA000E0552C /* PPTapDetectingWindow.m */; };
 /* End PBXBuildFile section */
 
@@ -412,6 +414,10 @@
 		38C13BBF16E9F86A005AD801 /* PPSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSignUpViewController.h; sourceTree = "<group>"; };
 		38C13BC016E9F86A005AD801 /* PPSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSignUpViewController.m; sourceTree = "<group>"; };
 		38C13BC116E9F86A005AD801 /* PPSignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PPSignUpViewController.xib; sourceTree = "<group>"; };
+		38C3E97416ED79D900E39AD2 /* NSDictionary+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Additions.h"; sourceTree = "<group>"; };
+		38C3E97516ED79D900E39AD2 /* NSDictionary+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Additions.m"; sourceTree = "<group>"; };
+		38C3E97716ED7CF800E39AD2 /* NSMutableDictionary+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+Additions.h"; sourceTree = "<group>"; };
+		38C3E97816ED7CF800E39AD2 /* NSMutableDictionary+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+Additions.m"; sourceTree = "<group>"; };
 		38E72F7116303FA000E0552C /* PPTapDetectingWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPTapDetectingWindow.h; sourceTree = "<group>"; };
 		38E72F7216303FA000E0552C /* PPTapDetectingWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPTapDetectingWindow.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -583,7 +589,6 @@
 			isa = PBXGroup;
 			children = (
 				386FAC86162EFD7500305B33 /* PPMacros.h */,
-				383E564A16EB896B00D45AB3 /* PPLogging.h */,
 			);
 			name = Macro;
 			sourceTree = "<group>";
@@ -675,14 +680,15 @@
 		386FAC87162EFD7F00305B33 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				387F12AD163053F500A9EA82 /* SSToolkit */,
-				387F1292163050E100A9EA82 /* ColorUtils */,
+				387F1292163050E100A9EA82 /* UIColor */,
+				38C3E97016ED798100E39AD2 /* NSDictionary */,
 				386FAD6B162F069600305B33 /* NSData */,
 				386FAD61162F064A00305B33 /* NSDate */,
 				386FAD60162F063D00305B33 /* NSString */,
 				386FACBF162F002000305B33 /* GraphicFilter */,
 				386FACBE162F001500305B33 /* Base64Transcoder */,
 				386FACBD162EFFFD00305B33 /* UI */,
+				387F12AD163053F500A9EA82 /* SSToolkit */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -691,6 +697,7 @@
 			isa = PBXGroup;
 			children = (
 				383E564916EB891E00D45AB3 /* Macro */,
+				38C3E96F16ED78A100E39AD2 /* Logging */,
 				383E564E16ECD0DC00D45AB3 /* Localization */,
 				383E564816EB88A900D45AB3 /* Validators */,
 				383E564716EB88A100D45AB3 /* Fonts */,
@@ -911,7 +918,7 @@
 			name = ViewUtils;
 			sourceTree = "<group>";
 		};
-		387F1292163050E100A9EA82 /* ColorUtils */ = {
+		387F1292163050E100A9EA82 /* UIColor */ = {
 			isa = PBXGroup;
 			children = (
 				387F128416304EFD00A9EA82 /* UIColor+CWAdditions.h */,
@@ -919,7 +926,7 @@
 				387F128E163050AB00A9EA82 /* UIColor+ColorUtils.h */,
 				387F128F163050AB00A9EA82 /* UIColor+ColorUtils.m */,
 			);
-			name = ColorUtils;
+			name = UIColor;
 			sourceTree = "<group>";
 		};
 		387F1293163050F300A9EA82 /* BarButtonItem */ = {
@@ -1266,6 +1273,25 @@
 			name = Menu;
 			sourceTree = "<group>";
 		};
+		38C3E96F16ED78A100E39AD2 /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				383E564A16EB896B00D45AB3 /* PPLogging.h */,
+			);
+			name = Logging;
+			sourceTree = "<group>";
+		};
+		38C3E97016ED798100E39AD2 /* NSDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				38C3E97416ED79D900E39AD2 /* NSDictionary+Additions.h */,
+				38C3E97516ED79D900E39AD2 /* NSDictionary+Additions.m */,
+				38C3E97716ED7CF800E39AD2 /* NSMutableDictionary+Additions.h */,
+				38C3E97816ED7CF800E39AD2 /* NSMutableDictionary+Additions.m */,
+			);
+			name = NSDictionary;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1463,6 +1489,8 @@
 				3804EEFE16EA4F1600820B78 /* PPJockeyDetailsViewController.m in Sources */,
 				3804EF0316EA4F2000820B78 /* PPTrainerDetailsViewController.m in Sources */,
 				383E565116ECD0F400D45AB3 /* LocalizationSystem.m in Sources */,
+				38C3E97616ED79D900E39AD2 /* NSDictionary+Additions.m in Sources */,
+				38C3E97916ED7CF800E39AD2 /* NSMutableDictionary+Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
