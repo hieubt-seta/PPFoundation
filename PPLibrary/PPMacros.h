@@ -167,9 +167,31 @@ return self; \
 
 /** Miles to Kilometers **/
 #define MILES_TO_KILOMETERS ( miles ) (miles * 1.60934)
- 
+
 /** Miles to Feets **/
 #define MILES_TO_FEETS ( miles ) ( miles * 5280 )
+
+#define LSSTRING(str) NSLocalizedString(str, str)
+
+#define NIL_IF_NULL(foo) ((foo == [NSNull null]) ? nil : foo)
+
+#define NULL_IF_NIL(foo) ((foo == nil) ? [NSNull null] : foo)
+
+#define EMPTY_IF_NIL(foo) ((foo == nil) ? @"" : foo)
+
+#define EMPTY_IF_NULL(foo) ((foo == [NSNull null]) ? @"" : foo)
+
+#define EMPTY_IF_NULL_OR_NIL(foo) ((foo == [NSNull null] || foo == nil) ? @"" : foo)
+
+#define SYSTEM_VERSION_EQUAL_TO(v)                  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedSame)
+
+#define SYSTEM_VERSION_GREATER_THAN(v)              ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedDescending)
+
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
+
+#define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
+
+#define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
 
 #pragma mark - DLOG
 

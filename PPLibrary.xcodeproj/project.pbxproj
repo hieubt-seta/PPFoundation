@@ -116,6 +116,8 @@
 		38C13B1F16E8E680005AD801 /* MagicalRecord+ShorthandSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C13B0216E8E680005AD801 /* MagicalRecord+ShorthandSupport.m */; };
 		38C13B2016E8E680005AD801 /* MagicalRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C13B0416E8E680005AD801 /* MagicalRecord.m */; };
 		38C13B9E16E9D9E5005AD801 /* PPValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C13B9D16E9D9E5005AD801 /* PPValidator.m */; };
+		38C3E97F16ED81E500E39AD2 /* NSDictionary+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C3E97C16ED81E500E39AD2 /* NSDictionary+Additions.m */; };
+		38C3E98016ED81E500E39AD2 /* NSMutableDictionary+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C3E97E16ED81E500E39AD2 /* NSMutableDictionary+Additions.m */; };
 		38E72F7316303FA000E0552C /* PPTapDetectingWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E72F7216303FA000E0552C /* PPTapDetectingWindow.m */; };
 /* End PBXBuildFile section */
 
@@ -335,6 +337,10 @@
 		38C13B0616E8E680005AD801 /* CoreData+MagicalRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CoreData+MagicalRecord.h"; sourceTree = "<group>"; };
 		38C13B9C16E9D9E5005AD801 /* PPValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPValidator.h; sourceTree = "<group>"; };
 		38C13B9D16E9D9E5005AD801 /* PPValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPValidator.m; sourceTree = "<group>"; };
+		38C3E97B16ED81E500E39AD2 /* NSDictionary+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Additions.h"; sourceTree = "<group>"; };
+		38C3E97C16ED81E500E39AD2 /* NSDictionary+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Additions.m"; sourceTree = "<group>"; };
+		38C3E97D16ED81E500E39AD2 /* NSMutableDictionary+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+Additions.h"; sourceTree = "<group>"; };
+		38C3E97E16ED81E500E39AD2 /* NSMutableDictionary+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+Additions.m"; sourceTree = "<group>"; };
 		38E72F7116303FA000E0552C /* PPTapDetectingWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPTapDetectingWindow.h; sourceTree = "<group>"; };
 		38E72F7216303FA000E0552C /* PPTapDetectingWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPTapDetectingWindow.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -462,8 +468,9 @@
 		386FAC87162EFD7F00305B33 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				38C3E97A16ED81D900E39AD2 /* NSDictionary */,
 				387F12AD163053F500A9EA82 /* SSToolkit */,
-				387F1292163050E100A9EA82 /* ColorUtils */,
+				387F1292163050E100A9EA82 /* UIColor */,
 				386FAD6B162F069600305B33 /* NSData */,
 				386FAD61162F064A00305B33 /* NSDate */,
 				386FAD60162F063D00305B33 /* NSString */,
@@ -706,7 +713,7 @@
 			name = ViewUtils;
 			sourceTree = "<group>";
 		};
-		387F1292163050E100A9EA82 /* ColorUtils */ = {
+		387F1292163050E100A9EA82 /* UIColor */ = {
 			isa = PBXGroup;
 			children = (
 				387F128416304EFD00A9EA82 /* UIColor+CWAdditions.h */,
@@ -714,7 +721,7 @@
 				387F128E163050AB00A9EA82 /* UIColor+ColorUtils.h */,
 				387F128F163050AB00A9EA82 /* UIColor+ColorUtils.m */,
 			);
-			name = ColorUtils;
+			name = UIColor;
 			sourceTree = "<group>";
 		};
 		387F1293163050F300A9EA82 /* BarButtonItem */ = {
@@ -942,6 +949,17 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
+		38C3E97A16ED81D900E39AD2 /* NSDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				38C3E97B16ED81E500E39AD2 /* NSDictionary+Additions.h */,
+				38C3E97C16ED81E500E39AD2 /* NSDictionary+Additions.m */,
+				38C3E97D16ED81E500E39AD2 /* NSMutableDictionary+Additions.h */,
+				38C3E97E16ED81E500E39AD2 /* NSMutableDictionary+Additions.m */,
+			);
+			name = NSDictionary;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1105,6 +1123,8 @@
 				38C13B1F16E8E680005AD801 /* MagicalRecord+ShorthandSupport.m in Sources */,
 				38C13B2016E8E680005AD801 /* MagicalRecord.m in Sources */,
 				38C13B9E16E9D9E5005AD801 /* PPValidator.m in Sources */,
+				38C3E97F16ED81E500E39AD2 /* NSDictionary+Additions.m in Sources */,
+				38C3E98016ED81E500E39AD2 /* NSMutableDictionary+Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
