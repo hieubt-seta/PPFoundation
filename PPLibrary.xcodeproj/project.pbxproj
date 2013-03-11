@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3819FCFE168ED0E500F98D4E /* PPFontsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3819FCFD168ED0E500F98D4E /* PPFontsManager.m */; };
-		3819FD06168F21D300F98D4E /* PPBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3819FD05168F21D300F98D4E /* PPBaseRequest.m */; };
 		386FAC4B162EFD6800305B33 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386FAC4A162EFD6800305B33 /* UIKit.framework */; };
 		386FAC4D162EFD6800305B33 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386FAC4C162EFD6800305B33 /* Foundation.framework */; };
 		386FAC4F162EFD6800305B33 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386FAC4E162EFD6800305B33 /* CoreGraphics.framework */; };
@@ -125,8 +124,6 @@
 /* Begin PBXFileReference section */
 		3819FCFC168ED0E400F98D4E /* PPFontsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPFontsManager.h; sourceTree = "<group>"; };
 		3819FCFD168ED0E500F98D4E /* PPFontsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPFontsManager.m; sourceTree = "<group>"; };
-		3819FD04168F21D300F98D4E /* PPBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPBaseRequest.h; sourceTree = "<group>"; };
-		3819FD05168F21D300F98D4E /* PPBaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPBaseRequest.m; sourceTree = "<group>"; };
 		386FAC46162EFD6800305B33 /* PPLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PPLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		386FAC4A162EFD6800305B33 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		386FAC4C162EFD6800305B33 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -386,22 +383,6 @@
 			name = InAppPurchase;
 			sourceTree = "<group>";
 		};
-		3819FD01168F219F00F98D4E /* Requests */ = {
-			isa = PBXGroup;
-			children = (
-				3819FD04168F21D300F98D4E /* PPBaseRequest.h */,
-				3819FD05168F21D300F98D4E /* PPBaseRequest.m */,
-			);
-			name = Requests;
-			sourceTree = "<group>";
-		};
-		3819FD03168F21BE00F98D4E /* Responses */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Responses;
-			sourceTree = "<group>";
-		};
 		386FAC3B162EFD6800305B33 = {
 			isa = PBXGroup;
 			children = (
@@ -497,7 +478,6 @@
 				38C3E98316EDC5D400E39AD2 /* Device */,
 				3819FD00168ED14600F98D4E /* InAppPurchase */,
 				3819FCFF168ED13700F98D4E /* CoreDataHelper */,
-				38B3E4CC168E0124006856F9 /* NetworkManager */,
 				387F1291163050B800A9EA82 /* ViewUtils */,
 				386FAD51162F05D600305B33 /* Quartz */,
 			);
@@ -811,15 +791,13 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		38B3E4CC168E0124006856F9 /* NetworkManager */ = {
+		38B3E4CC168E0124006856F9 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				3819FD01168F219F00F98D4E /* Requests */,
-				3819FD03168F21BE00F98D4E /* Responses */,
 				38B3E4CD168E0150006856F9 /* PPAPIClient.h */,
 				38B3E4CE168E0150006856F9 /* PPAPIClient.m */,
 			);
-			name = NetworkManager;
+			name = Network;
 			sourceTree = "<group>";
 		};
 		38C13A6E16E8E3CC005AD801 /* MFSideMenu */ = {
@@ -1002,6 +980,7 @@
 		38C3E98716EDC61600E39AD2 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				38B3E4CC168E0124006856F9 /* Network */,
 				38C3E98816EDC62500E39AD2 /* Setting */,
 			);
 			name = Managers;
@@ -1186,7 +1165,6 @@
 				38B3E4CF168E0150006856F9 /* PPAPIClient.m in Sources */,
 				38B3E4E0168E0755006856F9 /* PPSettingsManager.m in Sources */,
 				3819FCFE168ED0E500F98D4E /* PPFontsManager.m in Sources */,
-				3819FD06168F21D300F98D4E /* PPBaseRequest.m in Sources */,
 				38C13A7316E8E3CC005AD801 /* MFSideMenu.m in Sources */,
 				38C13A7416E8E3CC005AD801 /* UINavigationController+MFSideMenu.m in Sources */,
 				38C13B0716E8E680005AD801 /* MagicalImportFunctions.m in Sources */,
