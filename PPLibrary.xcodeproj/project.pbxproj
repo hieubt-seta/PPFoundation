@@ -118,6 +118,7 @@
 		38C13B9E16E9D9E5005AD801 /* PPValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C13B9D16E9D9E5005AD801 /* PPValidator.m */; };
 		38C3E97F16ED81E500E39AD2 /* NSDictionary+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C3E97C16ED81E500E39AD2 /* NSDictionary+Additions.m */; };
 		38C3E98016ED81E500E39AD2 /* NSMutableDictionary+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C3E97E16ED81E500E39AD2 /* NSMutableDictionary+Additions.m */; };
+		38C3E98E16EDC6F400E39AD2 /* LocalizationSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C3E98D16EDC6F400E39AD2 /* LocalizationSystem.m */; };
 		38E72F7316303FA000E0552C /* PPTapDetectingWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E72F7216303FA000E0552C /* PPTapDetectingWindow.m */; };
 /* End PBXBuildFile section */
 
@@ -341,6 +342,8 @@
 		38C3E97C16ED81E500E39AD2 /* NSDictionary+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Additions.m"; sourceTree = "<group>"; };
 		38C3E97D16ED81E500E39AD2 /* NSMutableDictionary+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+Additions.h"; sourceTree = "<group>"; };
 		38C3E97E16ED81E500E39AD2 /* NSMutableDictionary+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+Additions.m"; sourceTree = "<group>"; };
+		38C3E98C16EDC6F400E39AD2 /* LocalizationSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalizationSystem.h; sourceTree = "<group>"; };
+		38C3E98D16EDC6F400E39AD2 /* LocalizationSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalizationSystem.m; sourceTree = "<group>"; };
 		38E72F7116303FA000E0552C /* PPTapDetectingWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPTapDetectingWindow.h; sourceTree = "<group>"; };
 		38E72F7216303FA000E0552C /* PPTapDetectingWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPTapDetectingWindow.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -439,8 +442,8 @@
 		386FAC50162EFD6800305B33 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				386FAC85162EFD7500305B33 /* PPLibrary.h */,
-				38B3E4B3168DFAB8006856F9 /* AppDelegate */,
+				38C3E98F16EDC70700E39AD2 /* Common */,
+				38C3E98716EDC61600E39AD2 /* Managers */,
 				38B3E4B5168DFAE1006856F9 /* Models */,
 				38B3E4B6168DFAE6006856F9 /* Views */,
 				38B3E4B4168DFAD6006856F9 /* Controllers */,
@@ -468,8 +471,8 @@
 		386FAC87162EFD7F00305B33 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				38C3E98B16EDC6E000E39AD2 /* Localization */,
 				38C3E97A16ED81D900E39AD2 /* NSDictionary */,
-				387F12AD163053F500A9EA82 /* SSToolkit */,
 				387F1292163050E100A9EA82 /* UIColor */,
 				386FAD6B162F069600305B33 /* NSData */,
 				386FAD61162F064A00305B33 /* NSDate */,
@@ -477,6 +480,7 @@
 				386FACBF162F002000305B33 /* GraphicFilter */,
 				386FACBE162F001500305B33 /* Base64Transcoder */,
 				386FACBD162EFFFD00305B33 /* UI */,
+				387F12AD163053F500A9EA82 /* SSToolkit */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -484,27 +488,19 @@
 		386FACB5162EFDAB00305B33 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				38C3E98A16EDC65B00E39AD2 /* Validator */,
+				38C3E98216EDC5CA00E39AD2 /* Macros */,
+				38C3E98116EDC5C100E39AD2 /* Logging */,
+				38C3E98916EDC64500E39AD2 /* Font */,
+				38C3E98616EDC5F700E39AD2 /* LocalNotification */,
+				38C3E98516EDC5ED00E39AD2 /* Downloader */,
+				38C3E98416EDC5E500E39AD2 /* File */,
+				38C3E98316EDC5D400E39AD2 /* Device */,
 				3819FD00168ED14600F98D4E /* InAppPurchase */,
 				3819FCFF168ED13700F98D4E /* CoreDataHelper */,
 				38B3E4CC168E0124006856F9 /* NetworkManager */,
 				387F1291163050B800A9EA82 /* ViewUtils */,
 				386FAD51162F05D600305B33 /* Quartz */,
-				386FAC86162EFD7500305B33 /* PPMacros.h */,
-				386FACB6162EFDB900305B33 /* PPLogging.h */,
-				386FAD1C162F032B00305B33 /* PPDeviceUtil.h */,
-				386FACC5162F00B200305B33 /* PPDeviceUtil.m */,
-				386FACC8162F00B200305B33 /* PPFileUtil.h */,
-				386FAD19162F02F000305B33 /* PPFileUtil.m */,
-				386FACC6162F00B200305B33 /* PPDownloader.h */,
-				386FACC7162F00B200305B33 /* PPDownloader.m */,
-				386FAD1D162F037700305B33 /* PPLocalNotificationHelper.h */,
-				386FACCB162F00B200305B33 /* PPLocalNotificationHelper.m */,
-				38B3E4DE168E0755006856F9 /* PPSettingsManager.h */,
-				38B3E4DF168E0755006856F9 /* PPSettingsManager.m */,
-				3819FCFC168ED0E400F98D4E /* PPFontsManager.h */,
-				3819FCFD168ED0E500F98D4E /* PPFontsManager.m */,
-				38C13B9C16E9D9E5005AD801 /* PPValidator.h */,
-				38C13B9D16E9D9E5005AD801 /* PPValidator.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -960,6 +956,111 @@
 			name = NSDictionary;
 			sourceTree = "<group>";
 		};
+		38C3E98116EDC5C100E39AD2 /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				386FACB6162EFDB900305B33 /* PPLogging.h */,
+			);
+			name = Logging;
+			sourceTree = "<group>";
+		};
+		38C3E98216EDC5CA00E39AD2 /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+				386FAC86162EFD7500305B33 /* PPMacros.h */,
+			);
+			name = Macros;
+			sourceTree = "<group>";
+		};
+		38C3E98316EDC5D400E39AD2 /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				386FAD1C162F032B00305B33 /* PPDeviceUtil.h */,
+				386FACC5162F00B200305B33 /* PPDeviceUtil.m */,
+			);
+			name = Device;
+			sourceTree = "<group>";
+		};
+		38C3E98416EDC5E500E39AD2 /* File */ = {
+			isa = PBXGroup;
+			children = (
+				386FACC8162F00B200305B33 /* PPFileUtil.h */,
+				386FAD19162F02F000305B33 /* PPFileUtil.m */,
+			);
+			name = File;
+			sourceTree = "<group>";
+		};
+		38C3E98516EDC5ED00E39AD2 /* Downloader */ = {
+			isa = PBXGroup;
+			children = (
+				386FACC6162F00B200305B33 /* PPDownloader.h */,
+				386FACC7162F00B200305B33 /* PPDownloader.m */,
+			);
+			name = Downloader;
+			sourceTree = "<group>";
+		};
+		38C3E98616EDC5F700E39AD2 /* LocalNotification */ = {
+			isa = PBXGroup;
+			children = (
+				386FAD1D162F037700305B33 /* PPLocalNotificationHelper.h */,
+				386FACCB162F00B200305B33 /* PPLocalNotificationHelper.m */,
+			);
+			name = LocalNotification;
+			sourceTree = "<group>";
+		};
+		38C3E98716EDC61600E39AD2 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				38C3E98816EDC62500E39AD2 /* Setting */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		38C3E98816EDC62500E39AD2 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				38B3E4DE168E0755006856F9 /* PPSettingsManager.h */,
+				38B3E4DF168E0755006856F9 /* PPSettingsManager.m */,
+			);
+			name = Setting;
+			sourceTree = "<group>";
+		};
+		38C3E98916EDC64500E39AD2 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				3819FCFC168ED0E400F98D4E /* PPFontsManager.h */,
+				3819FCFD168ED0E500F98D4E /* PPFontsManager.m */,
+			);
+			name = Font;
+			sourceTree = "<group>";
+		};
+		38C3E98A16EDC65B00E39AD2 /* Validator */ = {
+			isa = PBXGroup;
+			children = (
+				38C13B9C16E9D9E5005AD801 /* PPValidator.h */,
+				38C13B9D16E9D9E5005AD801 /* PPValidator.m */,
+			);
+			name = Validator;
+			sourceTree = "<group>";
+		};
+		38C3E98B16EDC6E000E39AD2 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				38C3E98C16EDC6F400E39AD2 /* LocalizationSystem.h */,
+				38C3E98D16EDC6F400E39AD2 /* LocalizationSystem.m */,
+			);
+			name = Localization;
+			sourceTree = "<group>";
+		};
+		38C3E98F16EDC70700E39AD2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				38B3E4B3168DFAB8006856F9 /* AppDelegate */,
+				386FAC85162EFD7500305B33 /* PPLibrary.h */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1125,6 +1226,7 @@
 				38C13B9E16E9D9E5005AD801 /* PPValidator.m in Sources */,
 				38C3E97F16ED81E500E39AD2 /* NSDictionary+Additions.m in Sources */,
 				38C3E98016ED81E500E39AD2 /* NSMutableDictionary+Additions.m in Sources */,
+				38C3E98E16EDC6F400E39AD2 /* LocalizationSystem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
