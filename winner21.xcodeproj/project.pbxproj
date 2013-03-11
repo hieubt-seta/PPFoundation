@@ -707,7 +707,7 @@
 				383E564316EB887D00D45AB3 /* Devices */,
 				3819FD00168ED14600F98D4E /* IAP */,
 				3819FCFF168ED13700F98D4E /* CoreData */,
-				387F1291163050B800A9EA82 /* ViewUtils */,
+				387F1291163050B800A9EA82 /* UIView */,
 				386FAD51162F05D600305B33 /* Quartz */,
 			);
 			name = Helpers;
@@ -909,13 +909,13 @@
 			name = PPControls;
 			sourceTree = "<group>";
 		};
-		387F1291163050B800A9EA82 /* ViewUtils */ = {
+		387F1291163050B800A9EA82 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
 				387F127616304D9800A9EA82 /* PPViewUtils.h */,
 				387F127716304D9800A9EA82 /* PPViewUtils.m */,
 			);
-			name = ViewUtils;
+			name = UIView;
 			sourceTree = "<group>";
 		};
 		387F1292163050E100A9EA82 /* UIColor */ = {

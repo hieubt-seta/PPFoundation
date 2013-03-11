@@ -13,6 +13,8 @@
     BOOL _isShowingKeyboard;
 }
 
+@property (strong, nonatomic) UITextField *activeField;
+
 @end
 
 @implementation PPLoginViewController
@@ -78,6 +80,10 @@
 
 - (IBAction)btnLoginClicked:(id)sender
 {
+    if (self.activeField) {
+        [self.activeField resignFirstResponder];
+    }
+    
     [self.progressHUD showAnimated:YES whileExecutingBlock:^{
         sleep(2);
     } completionBlock:^{
@@ -112,6 +118,7 @@
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
+    self.activeField = textField;
     CGPoint pt;
     CGRect rc = [textField bounds];
     rc = [textField convertRect:rc toView:self.scrollView];
@@ -123,6 +130,7 @@
 
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
+    self.activeField = nil;
 }
 
 @end

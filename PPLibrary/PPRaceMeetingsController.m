@@ -38,6 +38,7 @@
 {
     [super localizeStrings];
     self.title = LSSTRING(@"Race Meetings");
+    [self setupBarButtonItems];
 }
 
 - (void)registerNotifications

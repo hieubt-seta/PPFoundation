@@ -43,6 +43,7 @@
 
 - (void)localizeStrings
 {
+    [super localizeStrings];
     [self setupMenuItems];
 }
 

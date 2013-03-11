@@ -13,6 +13,8 @@
     BOOL _isShowingKeyboard;
 }
 
+@property (strong, nonatomic) UITextField *activeField;
+
 @end
 
 @implementation PPSignUpViewController
@@ -72,10 +74,13 @@
 }
 
 - (IBAction)btnSignUpClicked:(id)sender {
+    if (self.activeField) {
+        [self.activeField resignFirstResponder];
+    }
     [self.progressHUD showAnimated:YES whileExecutingBlock:^{
         sleep(2);
     } completionBlock:^{
-        self.PPSESSION.isAuthenticated = NO;
+        self.PPSESSION.isAuthenticated = YES;
         [self.appDelegate showRaceMeetingView];
     }];
 }
@@ -108,6 +113,7 @@
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
+    self.activeField = textField;
     CGPoint pt;
     CGRect rc = [textField bounds];
     rc = [textField convertRect:rc toView:self.scrollView];
@@ -119,5 +125,6 @@
 
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
+    self.activeField = nil;
 }
 @end

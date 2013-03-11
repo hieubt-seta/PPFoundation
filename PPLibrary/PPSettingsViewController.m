@@ -29,8 +29,14 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+}
+
+- (void)localizeStrings
+{
+    [super localizeStrings];
     self.settingItems = @[LSSTRING(@"About Terms & Privacy"), LSSTRING(@"Tutorial"), LSSTRING(@"FAQ"), LSSTRING(@"Send Feedback")];
     self.title = LSSTRING(@"Settings");
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
