@@ -10,10 +10,10 @@
 
 @interface NSMutableDictionary (Additions)
 
-- (void)setBool:(BOOL)b forKey:(NSString *)defaultName;
-- (void)setInteger:(NSInteger)i forKey:(NSString *)defaultName;
-- (void)setFloat:(float)f forKey:(NSString *)defaultName;
-- (void)setDouble:(double)d forKey:(NSString *)defaultName;
-- (void)setArray:(NSArray *)arr forKey:(NSString *)defaultName;
+- (void)setBool:(BOOL)b forKey:(NSString *)key;
+- (void)setInteger:(NSInteger)i forKey:(NSString *)key;
+- (void)setFloat:(float)f forKey:(NSString *)key;
+- (void)setDouble:(double)d forKey:(NSString *)key;
+- (void)setArray:(NSArray *)arr forKey:(NSString *)key;
 
 @end

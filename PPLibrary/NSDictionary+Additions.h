@@ -10,11 +10,12 @@
 
 @interface NSDictionary (Additions)
 
-- (BOOL)boolForKey:(NSString *)defaultName;
-- (NSString *)stringForKey:(NSString *)defaultName;
-- (NSInteger)integerForKey:(NSString *)defaultName;
-- (float)floatForKey:(NSString *)defaultName;
-- (double)doubleForKey:(NSString *)defaultName;
-- (NSArray *)arrayForKey:(NSString *)defaultName;
+- (BOOL)boolForKey:(NSString *)key;
+- (NSString *)stringForKey:(NSString *)key;
+- (NSNumber *)numberForKey:(NSString *)key;
+- (NSInteger)integerForKey:(NSString *)key;
+- (float)floatForKey:(NSString *)key;
+- (double)doubleForKey:(NSString *)key;
+- (NSArray *)arrayForKey:(NSString *)key;
 
 @end

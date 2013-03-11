@@ -11,29 +11,29 @@
 @implementation NSMutableDictionary (Additions)
 
 
-- (void)setBool:(BOOL)b forKey:(NSString *)defaultName
+- (void)setBool:(BOOL)b forKey:(NSString *)key
 {
-    [self setObject:[NSNumber numberWithBool:b] forKey:defaultName];
+    [self setObject:[NSNumber numberWithBool:b] forKey:key];
 }
 
-- (void)setInteger:(NSInteger)i forKey:(NSString *)defaultName
+- (void)setInteger:(NSInteger)i forKey:(NSString *)key
 {
-    [self setObject:[NSNumber numberWithInt:i] forKey:defaultName];
+    [self setObject:[NSNumber numberWithInt:i] forKey:key];
 }
 
-- (void)setFloat:(float)f forKey:(NSString *)defaultName
+- (void)setFloat:(float)f forKey:(NSString *)key
 {
-    [self setObject:[NSNumber numberWithFloat:f] forKey:defaultName];
+    [self setObject:[NSNumber numberWithFloat:f] forKey:key];
 }
 
-- (void)setDouble:(double)d forKey:(NSString *)defaultName
+- (void)setDouble:(double)d forKey:(NSString *)key
 {
-    [self setObject:[NSNumber numberWithDouble:d] forKey:defaultName];
+    [self setObject:[NSNumber numberWithDouble:d] forKey:key];
 }
 
-- (void)setArray:(NSArray *)arr forKey:(NSString *)defaultName
+- (void)setArray:(NSArray *)arr forKey:(NSString *)key
 {
-    [self setObject:arr forKey:defaultName];
+    [self setObject:arr forKey:key];
 }
 
 @end

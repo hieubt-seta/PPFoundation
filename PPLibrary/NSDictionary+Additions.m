@@ -10,32 +10,36 @@
 
 @implementation NSDictionary (Additions)
 
-- (BOOL)boolForKey:(NSString *)defaultName
+- (BOOL)boolForKey:(NSString *)key
 {
-    id obj = [self objectForKey:defaultName];
+    id obj = [self objectForKey:key];
     if (obj) {
-        return [[self objectForKey:defaultName] boolValue];
+        return [[self objectForKey:key] boolValue];
     }
     return NO;
 }
 
-- (NSString *)stringForKey:(NSString *)defaultName
+- (NSString *)stringForKey:(NSString *)key
 {
-    id obj = [self objectForKey:defaultName];
-    if (obj) {
-        if ([obj isKindOfClass:[NSString class]]) {
-            return obj;
-        }
-        if ([obj respondsToSelector:@selector(stringValue)]) {
-            return [obj stringValue];
-        }
-    }
-    return nil;
+    id s = [self objectForKey:key];
+	if (s == [NSNull null] || ![s isKindOfClass:[NSString class]]) {
+		return nil;
+	}
+	return s;
 }
 
-- (NSInteger)integerForKey:(NSString *)defaultName
+- (NSNumber *)numberForKey:(NSString *)key
 {
-    id obj = [self objectForKey:defaultName];
+    id s = [self objectForKey:key];
+	if (s == [NSNull null] || ![s isKindOfClass:[NSNumber class]]) {
+		return nil;
+	}
+	return s;
+}
+
+- (NSInteger)integerForKey:(NSString *)key
+{
+    id obj = [self objectForKey:key];
     if (obj) {
         if ([obj respondsToSelector:@selector(integerValue)]) {
             return [obj integerValue];
@@ -44,9 +48,9 @@
     return 0;
 }
 
-- (float)floatForKey:(NSString *)defaultName
+- (float)floatForKey:(NSString *)key
 {
-    id obj = [self objectForKey:defaultName];
+    id obj = [self objectForKey:key];
     if (obj) {
         if ([obj respondsToSelector:@selector(floatValue)]) {
             return [obj floatValue];
@@ -56,9 +60,9 @@
     
 }
 
-- (double)doubleForKey:(NSString *)defaultName
+- (double)doubleForKey:(NSString *)key
 {
-    id obj = [self objectForKey:defaultName];
+    id obj = [self objectForKey:key];
     if (obj) {
         if ([obj respondsToSelector:@selector(doubleValue)]) {
             return [obj doubleValue];
@@ -67,9 +71,9 @@
     return 0;    
 }
 
-- (NSArray *)arrayForKey:(NSString *)defaultName
+- (NSArray *)arrayForKey:(NSString *)key
 {
-    id obj = [self objectForKey:defaultName];
+    id obj = [self objectForKey:key];
     if (obj) {
         if ([obj isKindOfClass:[NSArray array]] ||
             [obj isKindOfClass:[NSMutableArray array]]) {
@@ -77,7 +81,6 @@
         }
     }
     return nil;
-    
 }
 
 @end
