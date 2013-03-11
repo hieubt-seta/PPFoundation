@@ -471,7 +471,6 @@
 		386FAC87162EFD7F00305B33 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				38C3E98B16EDC6E000E39AD2 /* Localization */,
 				38C3E97A16ED81D900E39AD2 /* NSDictionary */,
 				387F1292163050E100A9EA82 /* UIColor */,
 				386FAD6B162F069600305B33 /* NSData */,
@@ -539,6 +538,7 @@
 		386FACDA162F01DC00305B33 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				38C3E98B16EDC6E000E39AD2 /* Localization */,
 				38C13ACB16E8E680005AD801 /* MagicalRecord */,
 				38C13A6E16E8E3CC005AD801 /* MFSideMenu */,
 				386FACE5162F021200305B33 /* AFNetworking */,
@@ -768,15 +768,6 @@
 			name = SSToolkit;
 			path = 3rdParties/SSToolkit;
 			sourceTree = SOURCE_ROOT;
-		};
-		38B3E4B3168DFAB8006856F9 /* AppDelegate */ = {
-			isa = PBXGroup;
-			children = (
-				386FAC59162EFD6800305B33 /* PPAppDelegate.h */,
-				386FAC5A162EFD6800305B33 /* PPAppDelegate.m */,
-			);
-			name = AppDelegate;
-			sourceTree = "<group>";
 		};
 		38B3E4B4168DFAD6006856F9 /* Controllers */ = {
 			isa = PBXGroup;
@@ -1055,8 +1046,9 @@
 		38C3E98F16EDC70700E39AD2 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				38B3E4B3168DFAB8006856F9 /* AppDelegate */,
 				386FAC85162EFD7500305B33 /* PPLibrary.h */,
+				386FAC59162EFD6800305B33 /* PPAppDelegate.h */,
+				386FAC5A162EFD6800305B33 /* PPAppDelegate.m */,
 			);
 			name = Common;
 			sourceTree = "<group>";
