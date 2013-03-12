@@ -19,8 +19,6 @@
 		386FAC61162EFD6800305B33 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 386FAC60162EFD6800305B33 /* Default-568h@2x.png */; };
 		386FAC64162EFD6800305B33 /* PPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 386FAC63162EFD6800305B33 /* PPViewController.m */; };
 		386FAC67162EFD6800305B33 /* PPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 386FAC65162EFD6800305B33 /* PPViewController.xib */; };
-		386FAC8A162EFD8F00305B33 /* Base64Transcoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 386FAC88162EFD8F00305B33 /* Base64Transcoder.c */; };
-		386FAC8F162EFD9600305B33 /* GraphicFilter.c in Sources */ = {isa = PBXBuildFile; fileRef = 386FAC8D162EFD9600305B33 /* GraphicFilter.c */; };
 		386FACA3162EFD9E00305B33 /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 386FAC92162EFD9E00305B33 /* GTMNSString+HTML.m */; };
 		386FACA5162EFD9E00305B33 /* NSDate+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 386FAC94162EFD9E00305B33 /* NSDate+Additions.m */; };
 		386FACA9162EFD9E00305B33 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 386FAC98162EFD9E00305B33 /* NSString+Additions.m */; };
@@ -143,11 +141,6 @@
 		386FAC6E162EFD6900305B33 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		386FAC85162EFD7500305B33 /* PPLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPLibrary.h; sourceTree = "<group>"; };
 		386FAC86162EFD7500305B33 /* PPMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPMacros.h; sourceTree = "<group>"; };
-		386FAC88162EFD8F00305B33 /* Base64Transcoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Base64Transcoder.c; sourceTree = "<group>"; };
-		386FAC89162EFD8F00305B33 /* Base64Transcoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Transcoder.h; sourceTree = "<group>"; };
-		386FAC8C162EFD9600305B33 /* Def.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Def.h; sourceTree = "<group>"; };
-		386FAC8D162EFD9600305B33 /* GraphicFilter.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = GraphicFilter.c; sourceTree = "<group>"; };
-		386FAC8E162EFD9600305B33 /* GraphicFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphicFilter.h; sourceTree = "<group>"; };
 		386FAC91162EFD9E00305B33 /* GTMNSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTMNSString+HTML.h"; sourceTree = "<group>"; };
 		386FAC92162EFD9E00305B33 /* GTMNSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMNSString+HTML.m"; sourceTree = "<group>"; };
 		386FAC93162EFD9E00305B33 /* NSDate+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Additions.h"; sourceTree = "<group>"; };
@@ -365,29 +358,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3819FCFF168ED13700F98D4E /* CoreDataHelper */ = {
+		3819FCFF168ED13700F98D4E /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
 				386FAD7E162F07EA00305B33 /* PPCoreDataHelper.h */,
 				386FAD7F162F07EA00305B33 /* PPCoreDataHelper.m */,
 			);
-			name = CoreDataHelper;
+			name = CoreData;
 			sourceTree = "<group>";
 		};
-		3819FD00168ED14600F98D4E /* InAppPurchase */ = {
+		3819FD00168ED14600F98D4E /* IAP */ = {
 			isa = PBXGroup;
 			children = (
 				386FAD6C162F072E00305B33 /* PPIAPHelper.h */,
 				386FAD6D162F072F00305B33 /* PPIAPHelper.m */,
 			);
-			name = InAppPurchase;
+			name = IAP;
 			sourceTree = "<group>";
 		};
 		386FAC3B162EFD6800305B33 = {
 			isa = PBXGroup;
 			children = (
 				386FAC50162EFD6800305B33 /* Classes */,
-				38B3E4B7168DFB13006856F9 /* Externals */,
+				38B3E4B7168DFB13006856F9 /* ThirdParties */,
 				38B3E4BF168DFC2C006856F9 /* Resources */,
 				386FAC51162EFD6800305B33 /* Supporting Files */,
 				386FAC49162EFD6800305B33 /* Frameworks */,
@@ -452,15 +445,12 @@
 		386FAC87162EFD7F00305B33 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				386FACBD162EFFFD00305B33 /* UI */,
 				38C3E97A16ED81D900E39AD2 /* NSDictionary */,
 				387F1292163050E100A9EA82 /* UIColor */,
 				386FAD6B162F069600305B33 /* NSData */,
 				386FAD61162F064A00305B33 /* NSDate */,
 				386FAD60162F063D00305B33 /* NSString */,
-				386FACBF162F002000305B33 /* GraphicFilter */,
-				386FACBE162F001500305B33 /* Base64Transcoder */,
-				386FACBD162EFFFD00305B33 /* UI */,
-				387F12AD163053F500A9EA82 /* SSToolkit */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -468,6 +458,8 @@
 		386FACB5162EFDAB00305B33 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				386FAD8C162F0CFA00305B33 /* PPControls */,
+				386FAC87162EFD7F00305B33 /* Categories */,
 				38C3E98A16EDC65B00E39AD2 /* Validator */,
 				38C3E98216EDC5CA00E39AD2 /* Macros */,
 				38C3E98116EDC5C100E39AD2 /* Logging */,
@@ -476,9 +468,8 @@
 				38C3E98516EDC5ED00E39AD2 /* Downloader */,
 				38C3E98416EDC5E500E39AD2 /* File */,
 				38C3E98316EDC5D400E39AD2 /* Device */,
-				3819FD00168ED14600F98D4E /* InAppPurchase */,
-				3819FCFF168ED13700F98D4E /* CoreDataHelper */,
-				387F1291163050B800A9EA82 /* ViewUtils */,
+				3819FD00168ED14600F98D4E /* IAP */,
+				3819FCFF168ED13700F98D4E /* CoreData */,
 				386FAD51162F05D600305B33 /* Quartz */,
 			);
 			name = Helpers;
@@ -494,38 +485,6 @@
 				386FAD5A162F05E600305B33 /* Image */,
 			);
 			name = UI;
-			sourceTree = "<group>";
-		};
-		386FACBE162F001500305B33 /* Base64Transcoder */ = {
-			isa = PBXGroup;
-			children = (
-				386FAC89162EFD8F00305B33 /* Base64Transcoder.h */,
-				386FAC88162EFD8F00305B33 /* Base64Transcoder.c */,
-			);
-			name = Base64Transcoder;
-			sourceTree = "<group>";
-		};
-		386FACBF162F002000305B33 /* GraphicFilter */ = {
-			isa = PBXGroup;
-			children = (
-				386FAC8C162EFD9600305B33 /* Def.h */,
-				386FAC8E162EFD9600305B33 /* GraphicFilter.h */,
-				386FAC8D162EFD9600305B33 /* GraphicFilter.c */,
-			);
-			name = GraphicFilter;
-			sourceTree = "<group>";
-		};
-		386FACDA162F01DC00305B33 /* Vendors */ = {
-			isa = PBXGroup;
-			children = (
-				38C3E98B16EDC6E000E39AD2 /* Localization */,
-				38C13ACB16E8E680005AD801 /* MagicalRecord */,
-				38C13A6E16E8E3CC005AD801 /* MFSideMenu */,
-				386FACE5162F021200305B33 /* AFNetworking */,
-				386FAD14162F028700305B33 /* MBProgressHUD */,
-				386FACE0162F020000305B33 /* AsyncImageView */,
-			);
-			name = Vendors;
 			sourceTree = "<group>";
 		};
 		386FACE0162F020000305B33 /* AsyncImageView */ = {
@@ -610,6 +569,8 @@
 		386FAD5C162F060E00305B33 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				387F127616304D9800A9EA82 /* PPViewUtils.h */,
+				387F127716304D9800A9EA82 /* PPViewUtils.m */,
 				38B3E401168DF8B4006856F9 /* UIView+Alignment.h */,
 				38B3E402168DF8B4006856F9 /* UIView+Alignment.m */,
 				386FACA1162EFD9E00305B33 /* UIView+Animatable.h */,
@@ -678,15 +639,6 @@
 				38E72F7216303FA000E0552C /* PPTapDetectingWindow.m */,
 			);
 			name = PPControls;
-			sourceTree = "<group>";
-		};
-		387F1291163050B800A9EA82 /* ViewUtils */ = {
-			isa = PBXGroup;
-			children = (
-				387F127616304D9800A9EA82 /* PPViewUtils.h */,
-				387F127716304D9800A9EA82 /* PPViewUtils.m */,
-			);
-			name = ViewUtils;
 			sourceTree = "<group>";
 		};
 		387F1292163050E100A9EA82 /* UIColor */ = {
@@ -773,14 +725,18 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
-		38B3E4B7168DFB13006856F9 /* Externals */ = {
+		38B3E4B7168DFB13006856F9 /* ThirdParties */ = {
 			isa = PBXGroup;
 			children = (
-				386FAC87162EFD7F00305B33 /* Categories */,
-				386FAD8C162F0CFA00305B33 /* PPControls */,
-				386FACDA162F01DC00305B33 /* Vendors */,
+				387F12AD163053F500A9EA82 /* SSToolkit */,
+				38C3E98B16EDC6E000E39AD2 /* Localization */,
+				38C13ACB16E8E680005AD801 /* MagicalRecord */,
+				38C13A6E16E8E3CC005AD801 /* MFSideMenu */,
+				386FACE5162F021200305B33 /* AFNetworking */,
+				386FAD14162F028700305B33 /* MBProgressHUD */,
+				386FACE0162F020000305B33 /* AsyncImageView */,
 			);
-			name = Externals;
+			name = ThirdParties;
 			path = PPLibrary;
 			sourceTree = "<group>";
 		};
@@ -1102,8 +1058,6 @@
 				386FAC57162EFD6800305B33 /* main.m in Sources */,
 				386FAC5B162EFD6800305B33 /* PPAppDelegate.m in Sources */,
 				386FAC64162EFD6800305B33 /* PPViewController.m in Sources */,
-				386FAC8A162EFD8F00305B33 /* Base64Transcoder.c in Sources */,
-				386FAC8F162EFD9600305B33 /* GraphicFilter.c in Sources */,
 				386FACA3162EFD9E00305B33 /* GTMNSString+HTML.m in Sources */,
 				386FACA5162EFD9E00305B33 /* NSDate+Additions.m in Sources */,
 				386FACA9162EFD9E00305B33 /* NSString+Additions.m in Sources */,
