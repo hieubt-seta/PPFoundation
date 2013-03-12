@@ -8,25 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@class PPSplashViewController;
-@class PPRaceMeetingsController;
-@class PPSideMenuViewController;
-@class MFSideMenu;
-
-typedef enum {
-    PPOpenAppFromBackgroundState        =       0,
-    PPOpenAppFromClosedState            =       1,
-    PPOpenAppFromInitializeState        =       2,
-} PPOpenAppFromState;
+@class PPViewController;
 
 @interface PPAppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (nonatomic, assign) PPOpenAppFromState appOpenFromState;
 @property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) PPRaceMeetingsController *mainViewController;
-@property (strong, nonatomic) MFSideMenu *sideMenu;
 
-- (void)showSplashView;
-- (void)showRaceMeetingView;
+@property (strong, nonatomic) PPViewController *viewController;
 
 @end

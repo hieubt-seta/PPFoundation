@@ -68,7 +68,7 @@
             return [obj doubleValue];
         }
     }
-    return 0;    
+    return 0;
 }
 
 - (NSArray *)arrayForKey:(NSString *)key

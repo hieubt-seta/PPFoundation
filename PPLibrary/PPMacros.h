@@ -167,7 +167,7 @@ return self; \
 
 /** Miles to Kilometers **/
 #define MILES_TO_KILOMETERS ( miles ) (miles * 1.60934)
- 
+
 /** Miles to Feets **/
 #define MILES_TO_FEETS ( miles ) ( miles * 5280 )
 

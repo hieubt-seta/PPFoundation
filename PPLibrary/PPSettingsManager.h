@@ -8,16 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum {
-    PPAppLanguageEnglish    =   0,
-    PPAppLanguageChinese    =   1,
-} PPAppLanguage;
-
 @interface PPSettingsManager : NSObject
-
-@property (nonatomic, retain) NSUserDefaults *userDefaults;
-@property (nonatomic, assign) PPAppLanguage currentLanguage;
-@property (nonatomic, assign) BOOL isFirstTimeOpenApp;
 
 + (PPSettingsManager *)sharedPPSettingsManager;
 
