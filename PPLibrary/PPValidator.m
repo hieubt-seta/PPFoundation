@@ -1,6 +1,6 @@
 //
 //  PPValidator.m
-//  winner21
+//  PPLibrary
 //
 //  Created by Hieu Bui on 3/8/13.
 //  Copyright (c) 2013 PIPU. All rights reserved.
